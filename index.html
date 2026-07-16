@@ -23,9 +23,12 @@
   table.def tr:nth-child(even) td { background: #f5ebdf; }
   nav.toc { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 8px 0 4px; }
   nav.toc a { text-decoration: none; font-weight: 700; padding: 9px 18px; border-radius: 999px; background: #fff; border: 1px solid #e8dccc; color: #6b3f1d; }
-  section { margin-top: 38px; }
-  section h2 { font-size: 1.5rem; margin-bottom: 4px; }
-  .count { font-size: .85rem; background: #fff; border: 1px solid #e8dccc; border-radius: 999px; padding: 3px 12px; vertical-align: middle; color: #6b3f1d; }
+  .tabbar { position: sticky; top: 0; z-index: 6; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; padding: 12px 8px; margin-top: 34px; background: #faf6f0; border-bottom: 2px solid #e8dccc; }
+  .tab { border: 2px solid #e8dccc; background: #fff; color: #6b3f1d; font-size: 1rem; font-weight: 700; padding: 10px 22px; border-radius: 999px; cursor: pointer; }
+  .tab.active { background: var(--tabcor); border-color: var(--tabcor); color: #fff; }
+  .tab .tcount { font-size: .78rem; opacity: .8; margin-left: 4px; }
+  .tabpane { display: none; margin-top: 20px; }
+  .tabpane.active { display: block; }
   .objdef { font-size: .92rem; margin-bottom: 12px; }
   .filters { margin: 10px 0 16px; display: flex; gap: 8px; flex-wrap: wrap; }
   .fbtn { border: 1px solid #e8dccc; background: #fff; color: #6b3f1d; padding: 6px 14px; border-radius: 999px; cursor: pointer; font-size: .85rem; }
@@ -36,8 +39,12 @@
   .cardhead { padding: 12px 14px 4px; font-size: 1rem; }
   .num { font-weight: 800; color: #b8862d; margin-right: 4px; }
   .nome { font-weight: 700; }
-  .badges { padding: 0 14px 8px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .badges { padding: 0 14px 6px; display: flex; gap: 6px; flex-wrap: wrap; }
   .badge { font-size: .72rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
+  .meta { padding: 0 14px 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: .78rem; }
+  .autor { font-weight: 700; color: #1155cc; text-decoration: none; }
+  .met { background: #f5ebdf; border-radius: 999px; padding: 2px 9px; color: #6b3f1d; font-weight: 600; }
+  .vazio { color: #b3a08c; font-weight: 400; font-style: italic; background: none; }
   .player { background: #f5ebdf; min-height: 460px; display: flex; align-items: center; justify-content: center; }
   .player iframe { width: 100%; height: 460px; border: 0; background: #fff; }
   .player.noembed { color: #a88; font-size: .85rem; }
@@ -58,9 +65,7 @@
 
 <nav class="toc">
   <a href="#briefing">📋 O briefing</a>
-  <a href="#crescimento">🚀 Crescimento</a>
-  <a href="#confiança">🤝 Confiança</a>
-  <a href="#venda">💰 Venda</a>
+  <a href="#tabs">🎬 Os vídeos</a>
 </nav>
 
 <div class="box" id="briefing">
@@ -97,9 +102,9 @@
   <p>• <b>O fluxo:</b> escolher o vídeo abaixo → adaptar o roteiro (validar antes de gravar) → gravar → postar → registrar métricas na planilha.</p>
 </div>
 
+<div class="tabbar" id="tabs"><button class="tab active" data-tab="crescimento" style="--tabcor:#2e7d32">🚀 Crescimento <span class="tcount">30</span></button><button class="tab" data-tab="confianca" style="--tabcor:#1e5b8a">🤝 Confiança <span class="tcount">12</span></button><button class="tab" data-tab="venda" style="--tabcor:#b8862d">💰 Venda <span class="tcount">17</span></button></div>
 
-<section id="crescimento">
-  <h2 style="color:#2e7d32">🚀 CRESCIMENTO <span class="count">30 vídeos</span></h2>
+<section id="crescimento" class="tabpane active">
   <p class="objdef"><b>Objetivo:</b> Fazer quem NUNCA ouviu falar da Holy Cookie assistir, compartilhar e seguir. &nbsp;·&nbsp; <b>Métrica:</b> Alcance, compartilhamentos, seguidores novos</p>
   <div class="filters" data-target="crescimento">
     <button class="fbtn active" data-f="">Todos</button>
@@ -110,6 +115,7 @@
   <div class="grid"><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#3</span> <span class="nome">⭐ Competição entre mulheres (sketch)</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/tylerjohnperry/" target="_blank" rel="noopener">@tylerjohnperry</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZAvsiHof90/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Conflito reconhecível (mulheres competindo, num restaurante); o produto entra na trama, não é o assunto</p>
@@ -119,6 +125,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#5</span> <span class="nome">Fila lenta (sketch na fila)</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/notsuitableforwork/" target="_blank" rel="noopener">@notsuitableforwork</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZIUveAB3mv/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Correção do Fred: a loja é só pano de fundo da sketch; não se fala nada do produto — vídeo indireto</p>
@@ -128,6 +135,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#11</span> <span class="nome">&quot;Igualmente&quot;</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/opaocaseirodeamargosa/" target="_blank" rel="noopener">@opaocaseirodeamargosa</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DY4uyIkhZ57/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Mico universal (responder &quot;igualmente&quot; errado) + virada literal</p>
@@ -137,6 +145,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#12</span> <span class="nome">⭐ Puxa o cookie + falso justiceiro</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/jonathannemer/" target="_blank" rel="noopener">@jonathannemer</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DY2BX6fxtlr/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Twist duplo: o &quot;justiceiro&quot; que tomaria satisfação entra na zoeira</p>
@@ -146,6 +155,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#13</span> <span class="nome">Espírito sai do corpo</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/kris_pirozhkova/" target="_blank" rel="noopener">@kris_pirozhkova</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZGFb3txZwS/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Trend em alta: por fora come sério, por dentro a alma dança</p>
@@ -155,6 +165,7 @@
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#16</span> <span class="nome">Minissérie (ref. 1, ep. 39)</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/winnie_thepooj/" target="_blank" rel="noopener">@winnie_thepooj</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DNYbQCIRWQ5/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Serialização: personagens fixos e tema central fazem o público VOLTAR</p>
@@ -164,6 +175,7 @@
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#17</span> <span class="nome">Minissérie (ref. 2)</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/roomiesroomiesroomies/" target="_blank" rel="noopener">@roomiesroomiesroomies</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DPnSSeLDL9K/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Mesmo formato: cenário, roteiro e construção por trás</p>
@@ -173,6 +185,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#18</span> <span class="nome">Frases sem graça dos clientes</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/acainograubacabal/" target="_blank" rel="noopener">@acainograubacabal</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYUzgmEuIFI/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Compilação de micos; identificação dupla (atenção: baixa diferenciação)</p>
@@ -182,6 +195,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#19</span> <span class="nome">Não deixa dividir a conta</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/anastasiiakay/" target="_blank" rel="noopener">@anastasiiakay</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYZlQjANizi/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Debate quente (quem paga?) + terceiro que se intromete = guerra de comentários</p>
@@ -191,6 +205,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#20</span> <span class="nome">Kit kids na hora da conta</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/quienesjuaan/" target="_blank" rel="noopener">@quienesjuaan</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZ6GPJYiYU-/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Sátira visual sem fala: homem tratado como criança</p>
@@ -200,6 +215,7 @@
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#21</span> <span class="nome">Traição flagrada na loja</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/colteliacai/" target="_blank" rel="noopener">@colteliacai</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DVzOS5zESLu/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Fofoca prende + twist espelhado (ela também traía); loja em quadro o tempo todo</p>
@@ -209,6 +225,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#23</span> <span class="nome">Golpe da vaga</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/crumblverse/" target="_blank" rel="noopener">@crumblverse</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DRj_dMnjqQA/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Golpe revelado no twist; indignação compartilhável (cenário: loja de cookies!)</p>
@@ -218,6 +235,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#24</span> <span class="nome">Falsa gentileza</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/colteliacai/" target="_blank" rel="noopener">@colteliacai</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXhUlLmjqq8/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Trend: o gesto &quot;protetor&quot; era pretexto para beber o milkshake dela</p>
@@ -227,6 +245,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#28</span> <span class="nome">Troca o namorado</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/browniepointuae/" target="_blank" rel="noopener">@browniepointuae</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DJwbBEQJr71/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Trend: pede para trocar o doce, oferecem &quot;outras opções&quot;... de namorado</p>
@@ -236,6 +255,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#31a</span> <span class="nome">&quot;Esse pedido não é o seu&quot;</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/laistranches/" target="_blank" rel="noopener">@laistranches</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZm7fkapcCE/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Meme de balcão: ansiedade da fila + resposta atrevida</p>
@@ -245,6 +265,7 @@
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#32</span> <span class="nome">Bandido para na loja</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/funnymilk.tv/" target="_blank" rel="noopener">@funnymilk.tv</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXS5MMizkgX/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Inversão absurda: o assaltante vira cuidador da vítima</p>
@@ -254,6 +275,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#33</span> <span class="nome">Cookie cai: luto</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/denis_deham/" target="_blank" rel="noopener">@denis_deham</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXQ85uYiN5m/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Microtragédia: dor mínima, drama máximo; sem fala</p>
@@ -263,6 +285,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#34</span> <span class="nome">Prompt de ChatGPT</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/nathandoan/" target="_blank" rel="noopener">@nathandoan</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXxobECvUn9/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Pesca a bolha tech: frustração digital encenada no físico</p>
@@ -272,6 +295,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#36</span> <span class="nome">Primeiro dia de atendente</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/gili.ribeiro/" target="_blank" rel="noopener">@gili.ribeiro</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DW7SjV0jhHg/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Trend: o frame &quot;primeiro dia&quot; licencia o absurdo literal</p>
@@ -281,6 +305,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#39</span> <span class="nome">Leva o último cookie</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/bagelshopnashville/" target="_blank" rel="noopener">@bagelshopnashville</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXMcFqYggBL/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Pergunta ambígua: ele ouve flerte, ela só queria a cadeira</p>
@@ -290,6 +315,7 @@
 </div><div class="card off" data-tipo="">
   <div class="cardhead"><span class="num">#40</span> <span class="nome">Funil de perguntas do casal (DESCARTADO pelo Fred)</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">❌ Descartado</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/eatitkatie/" target="_blank" rel="noopener">@eatitkatie</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXfo_uxDUY4/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Dilema universal (&quot;onde comer?&quot;) + formato replicável por casais</p>
@@ -299,6 +325,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#42</span> <span class="nome">Mordidinha fatal</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/brunaayraa/" target="_blank" rel="noopener">@brunaayraa</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXsbb1RjM00/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> &quot;Posso dar uma mordida?&quot; → devolve só a casquinha; punchline visual</p>
@@ -308,6 +335,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#43</span> <span class="nome">Pesadelo do cookie</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/cityscapewinery/" target="_blank" rel="noopener">@cityscapewinery</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZOyCSrgpU5/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Personificação: o pesadelo era DO copo (sonhou que caía)</p>
@@ -317,6 +345,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#45</span> <span class="nome">Mesa errada (2 referências)</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/60secondstonapoli/" target="_blank" rel="noopener">@60secondstonapoli</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXll7_hFNbR/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Indignação invertida: ELA comia o prato do estranho; replay garantido. 2ª ref. com filmagem/roteiro melhores: DXll7_hFNbR; original: DXyjJ58zQks</p>
@@ -326,6 +355,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#48</span> <span class="nome">Cortesia: &quot;traz aí&quot; (1,5 mi de views)</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><span class="autor vazio">perfil a identificar</span><span class="met" title="views">👁 ~1,5 mi</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DWWVYR_jj-0/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> 3 atos: escalada de presentes + confronto com twist + orgulho rendido à sobremesa</p>
@@ -335,6 +365,7 @@
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#50</span> <span class="nome">Come a caixa no caminho</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/giulia.ristuccia/" target="_blank" rel="noopener">@giulia.ristuccia</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DY6dUqUNnBN/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Gesto grandioso sabotado pela gula: compra pizza nova, chega só borda</p>
@@ -344,6 +375,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#51</span> <span class="nome">Desafio MrBeast</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/feastables/" target="_blank" rel="noopener">@feastables</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYfKJ_ixBpi/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Placa &quot;o primeiro que trouxer X ganha US$ 10 mil&quot; + câmera fixa = corrida real e caos genuíno</p>
@@ -353,6 +385,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#54</span> <span class="nome">Testemunho por café</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/lainocente.go/" target="_blank" rel="noopener">@lainocente.go</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaOB6ewITz-/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> &quot;Me conta uma fofoca e te dou um café&quot;: as histórias das pessoas SÃO o vídeo; conteúdo infinito por brinde barato</p>
@@ -362,6 +395,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#55</span> <span class="nome">Papelzinho da vergonha</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/crumblverse/" target="_blank" rel="noopener">@crumblverse</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXZmBkEEUs8/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Trend: pede &quot;um café&quot; + papelzinho com a bebida real; o atendente entrega anunciando &quot;seu café&quot; — cumplicidade com o cliente</p>
@@ -371,6 +405,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#57</span> <span class="nome">&quot;Nossa&quot; = R$ 5 de desconto</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/fabricadolancherp/" target="_blank" rel="noopener">@fabricadolancherp</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaTfCx4hCYj/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Correção do Fred: a mecânica é um absurdo cômico, não promoção real — vídeo de CRESCIMENTO. O cliente exagerando o &quot;nossa&quot; é a piada</p>
@@ -379,10 +414,9 @@
   </div>
 </div></div>
 </section>
-<section id="confiança">
-  <h2 style="color:#1e5b8a">🤝 CONFIANÇA <span class="count">12 vídeos</span></h2>
+<section id="confianca" class="tabpane">
   <p class="objdef"><b>Objetivo:</b> Fazer quem já chegou acreditar que o cookie é bom e que existe gente de verdade ali. &nbsp;·&nbsp; <b>Métrica:</b> Retenção, salvamentos, “preciso provar isso”</p>
-  <div class="filters" data-target="confiança">
+  <div class="filters" data-target="confianca">
     <button class="fbtn active" data-f="">Todos</button>
     <button class="fbtn" data-f="1">Tipo 1 · Simples</button>
     <button class="fbtn" data-f="2">Tipo 2 · Autoral</button>
@@ -391,6 +425,7 @@
   <div class="grid"><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#9</span> <span class="nome">Degustação na rua com feedback real</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/dirohotdog/" target="_blank" rel="noopener">@dirohotdog</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYTBo59pSrc/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> &quot;Qual é a pegadinha?&quot; — só mordida generosa e feedback REAL; reação autêntica é prova social que anúncio não compra</p>
@@ -400,6 +435,7 @@
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#10</span> <span class="nome">Rap da produção</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/padariapurotrigo/" target="_blank" rel="noopener">@padariapurotrigo</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaGTYJkSDL8/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Funcionários de rapper mostrando a produção: transparência disfarçada de clipe; equipe com rosto</p>
@@ -409,6 +445,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#15</span> <span class="nome">Troca o pedido por amor</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/ladylaurencassidy/" target="_blank" rel="noopener">@ladylaurencassidy</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYpr2B7Pvlh/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Wholesome: gesto silencioso de amor emociona; casais se marcam (&quot;aprende&quot;)</p>
@@ -418,6 +455,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#26</span> <span class="nome">Produção em massa (126 mil curtidas)</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/baudelairecookies/" target="_blank" rel="noopener">@baudelairecookies</a><span class="met" title="curtidas">❤️ 126 mil</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DR178yxDly_/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Benchmark do nicho (4 mil cookies/dia): abundância + &quot;como é feito&quot; + escala = prova de qualidade</p>
@@ -427,6 +465,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#27</span> <span class="nome">&quot;Marketing explica a produção&quot;</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/bombonnicake/" target="_blank" rel="noopener">@bombonnicake</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DUdSSrrEVoe/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Leigo narrando a produção errado (&quot;enfia num potinho, sai o creme&quot;): autozoeira humaniza</p>
@@ -436,6 +475,7 @@
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#29</span> <span class="nome">Lista de clássicos + marca como fecho</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/alykima_/" target="_blank" rel="noopener">@alykima_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYNP5xORypr/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Estilo Ralph Lauren: lista de clássicos amados e a marca como último item da categoria</p>
@@ -445,6 +485,7 @@
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#30</span> <span class="nome">Sketch falsa (cookie = memória)</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/arebimboca/" target="_blank" rel="noopener">@arebimboca</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DX-Hm7NqejI/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Cavalo de Troia: história de romance que se revela campanha (asma); mensagem grava fundo</p>
@@ -454,6 +495,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#35</span> <span class="nome">&quot;Meu amor&quot; para todos</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/wirisvianaoficial/" target="_blank" rel="noopener">@wirisvianaoficial</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXow9AADrsv/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Cliente acredita no &quot;meu amor&quot; da atendente, volta com flores... ela fala para todos</p>
@@ -463,6 +505,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#44</span> <span class="nome">Dono escondido do amigo</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/buzzcafeoficial/" target="_blank" rel="noopener">@buzzcafeoficial</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZIqo9COv7T/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Verdade de empreendedor (amigo quer comer grátis) + timing cruel da maquininha negada</p>
@@ -472,6 +515,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#46</span> <span class="nome">Chocolate na cara</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/sodiedocesniteroi_/" target="_blank" rel="noopener">@sodiedocesniteroi_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DW9nMbQAB4c/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Negação com a prova na cara, em escalada de culpados; nem a equipe resiste ao produto</p>
@@ -481,6 +525,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#49</span> <span class="nome">Rito do funcionário (14 mil curtidas)</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/baudelairecookies/" target="_blank" rel="noopener">@baudelairecookies</a><span class="met" title="curtidas">❤️ 14 mil</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZ7hImEOcXt/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Benchmark do nicho: novato prova o cardápio e registra impressões; prova social de quem vai vender</p>
@@ -490,6 +535,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#52</span> <span class="nome">Cookie na rua com nota</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/goodolcookie/" target="_blank" rel="noopener">@goodolcookie</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DVd_B18j8AS/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Já é de cookie: pessoa prova na rua e dá nota 0-10; reação real = prova social, a nota gera comentário (&quot;deu só 8?!&quot;)</p>
@@ -498,8 +544,7 @@
   </div>
 </div></div>
 </section>
-<section id="venda">
-  <h2 style="color:#b8862d">💰 VENDA <span class="count">17 vídeos</span></h2>
+<section id="venda" class="tabpane">
   <p class="objdef"><b>Objetivo:</b> Dar um motivo concreto para comprar HOJE. &nbsp;·&nbsp; <b>Métrica:</b> Movimento na loja, pedidos, cliques</p>
   <div class="filters" data-target="venda">
     <button class="fbtn active" data-f="">Todos</button>
@@ -510,6 +555,7 @@
   <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#1</span> <span class="nome">Toda sobremesa = cookie</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/expoiso_/" target="_blank" rel="noopener">@expoiso_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaCt1DMpEWw/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Repetição de um elemento fixo em contextos variados instala o hábito na cabeça do espectador</p>
@@ -519,6 +565,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#2</span> <span class="nome">Acerte o preço e leve grátis</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/theguy/" target="_blank" rel="noopener">@theguy</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaT2F8DNMv4/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Desafio interativo com produto e preço em cena; chuva de palpites nos comentários</p>
@@ -528,6 +575,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#4</span> <span class="nome">&quot;Morrendo&quot; de fome de doce</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/paodequeijomania_cinturaoverde/" target="_blank" rel="noopener">@paodequeijomania_cinturaoverde</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DT-0843DfeZ/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Drama → twist: estava &quot;morrendo&quot; de fome; o estabelecimento é a salvação</p>
@@ -537,6 +585,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#6</span> <span class="nome">Irritada → cookie</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/maddy_macrae_/" target="_blank" rel="noopener">@maddy_macrae_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZHvmSiPEH5/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Desabafo relatable + virada instantânea de humor ao receber o produto</p>
@@ -546,6 +595,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#7</span> <span class="nome">Escalada dos pretendentes</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/samoflowersuz/" target="_blank" rel="noopener">@samoflowersuz</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZ0HBy_ImxK/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Escalada cômica: cada rodada sobe a aposta; o produto é a arma da disputa</p>
@@ -555,6 +605,7 @@
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#8</span> <span class="nome">Sinais por toda parte</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/flowcookies027/" target="_blank" rel="noopener">@flowcookies027</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZ5ln74Cc9L/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> &quot;Sinais que você não pode ignorar&quot;: o universo mandando comer; dá permissão para o desejo</p>
@@ -564,6 +615,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#14</span> <span class="nome">Compra tudo, esquece o 1</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/vivabemsg/" target="_blank" rel="noopener">@vivabemsg</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZco-5KKkck/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Confissão coletiva da compra por impulso; a &quot;crítica&quot; é elogio à loja</p>
@@ -573,6 +625,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#22</span> <span class="nome">&quot;Pra cookie tenho dinheiro&quot;</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/kaka_placido/" target="_blank" rel="noopener">@kaka_placido</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DWUyYP7Dzx9/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Mal-entendido em loop + verdade universal: para comida sempre tem dinheiro</p>
@@ -582,6 +635,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#25</span> <span class="nome">Clipe viral + apresentação da loja</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/judysfamilycafe/" target="_blank" rel="noopener">@judysfamilycafe</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DUO0ZzBDndH/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> FÓRMULA repetível: hook viral emprestado + continuação cômica + apresentação da loja</p>
@@ -591,6 +645,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#31b</span> <span class="nome">&quot;Os 5 tipos de fome&quot;</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/laistranches/" target="_blank" rel="noopener">@laistranches</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZm7fkapcCE/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Taxonomia divertida que desfila o cardápio com desculpa criativa</p>
@@ -600,6 +655,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#37</span> <span class="nome">&quot;Perdemos R$ 15&quot;</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/gameworldindiana/" target="_blank" rel="noopener">@gameworldindiana</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaEKmYtEdCX/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Matemática circular: &quot;devolve&quot; o dinheiro, &quot;ganha&quot; o produto... que custa exatamente aquilo</p>
@@ -609,6 +665,7 @@
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#38</span> <span class="nome">Perseguição</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/yesly/" target="_blank" rel="noopener">@yesly</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZnZYJAxZKg/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> O esforço absurdo precifica o produto; a marca é o punchline final</p>
@@ -618,6 +675,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#41</span> <span class="nome">&quot;Amigos?&quot;</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><span class="autor vazio">perfil a identificar</span><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZpxfc4Bgts/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> 3 milkshakes para 1 pessoa: gula sem culpa normaliza consumo maior. 2 falas, 1 take</p>
@@ -627,6 +685,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#47</span> <span class="nome">Cookie de colorir</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/_camellia08_/" target="_blank" rel="noopener">@_camellia08_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZVBILkJfmv/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Gesto da conta reinterpretado + legenda emocional (&quot;te entende melhor que seu ex&quot;)</p>
@@ -636,6 +695,7 @@
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#53</span> <span class="nome">Molho &quot;botão de volume&quot;</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/joycelyn_e98/" target="_blank" rel="noopener">@joycelyn_e98</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DTysEuQEaJO/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Metáfora de abundância: girou o molho, mais produtos aparecem na mesa; vende sem vender — desejo puro</p>
@@ -645,6 +705,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#56</span> <span class="nome">Bolinha nos copos</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/mrbeastburgernz/" target="_blank" rel="noopener">@mrbeastburgernz</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYRVusymuZ4/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Desafio de pontaria: acertou o copo, leva o lanche; produtos + loja em cena o vídeo todo</p>
@@ -654,6 +715,7 @@
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#58</span> <span class="nome">Bolinha no jarro (troco de 100)</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><span class="autor vazio">perfil a identificar</span><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DX2dowGQkbr/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div>
   <div class="cardbody">
     <p><b>Por que viralizou:</b> Matemática do golpe simpático (par do #37): &quot;ganha grátis&quot;... pagando 100 numa conta de 23; o espectador refaz a conta</p>
@@ -667,6 +729,14 @@
 </div>
 
 <script>
+document.querySelectorAll(".tab").forEach(function(t) {
+  t.addEventListener("click", function() {
+    document.querySelectorAll(".tab").forEach(function(b) { b.classList.remove("active"); });
+    document.querySelectorAll(".tabpane").forEach(function(p) { p.classList.remove("active"); });
+    t.classList.add("active");
+    document.getElementById(t.dataset.tab).classList.add("active");
+  });
+});
 document.querySelectorAll(".filters").forEach(function(f) {
   f.addEventListener("click", function(e) {
     if (!e.target.classList.contains("fbtn")) return;
