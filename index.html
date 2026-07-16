@@ -33,6 +33,8 @@
   .filters { margin: 10px 0 16px; display: flex; gap: 8px; flex-wrap: wrap; }
   .fbtn { border: 1px solid #e8dccc; background: #fff; color: #6b3f1d; padding: 6px 14px; border-radius: 999px; cursor: pointer; font-size: .85rem; }
   .fbtn.active { background: #6b3f1d; color: #fff; border-color: #6b3f1d; }
+  .legenda { display: flex; gap: 14px; flex-wrap: wrap; font-size: .78rem; color: #8a6d55; margin: -6px 0 16px; }
+  .legenda span { background: #fff; border: 1px solid #e8dccc; border-radius: 8px; padding: 4px 10px; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 18px; }
   .card { background: #fff; border: 1px solid #e8dccc; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 4px rgba(107,63,29,.06); }
   .card.off { opacity: .55; }
@@ -98,7 +100,15 @@
 </div>
 
 <div class="box">
-  <h2>4. Como vamos trabalhar</h2>
+  <h2>4. Os três tipos de produção</h2>
+  <p>Cada vídeo do banco está classificado pelo esforço de produção que exige — é isso que os filtros das abas significam:</p>
+  <p>• <b>Tipo 1 — Simples:</b> trends e formatos prontos. Quase não exige roteiro: é copiar a estrutura e gravar — em geral 1 take, 1 cenário, poucas pessoas. É o nosso volume semanal.</p>
+  <p>• <b>Tipo 2 — Autoral:</b> exige um pequeno desenvolvimento de roteiro — sentar e adaptar a piada para o nosso contexto antes de gravar. É o diferencial do perfil.</p>
+  <p>• <b>Tipo 3 — Complexo:</b> exige roteiro grande e produção maior — várias cenas, locações ou personagens (minisséries, campanhas). São apostas espaçadas, bem planejadas.</p>
+</div>
+
+<div class="box">
+  <h2>5. Como vamos trabalhar</h2>
   <p>• <b>O modelo:</b> vamos criar um Instagram da Holy Cookie modelando o <a href="https://www.instagram.com/crumblverse/" target="_blank" rel="noopener">@crumblverse</a> (o "Crumbl Universe", da Crumbl Cookies) — um perfil de branding feito só de sketches de produto, o tempo todo.</p>
   <p>• <b>O mix:</b> a cada 10 posts: ~7 de Crescimento, ~2 de Confiança, ~1 de Venda.</p>
   <p>• <b>O fluxo:</b> escolher o vídeo abaixo → adaptar o roteiro (validar antes de gravar) → gravar → postar → registrar métricas na planilha.</p>
@@ -110,9 +120,14 @@
   <p class="objdef"><b>Objetivo:</b> Fazer quem NUNCA ouviu falar da Holy Cookie assistir, compartilhar e seguir. &nbsp;·&nbsp; <b>Métrica:</b> Alcance, compartilhamentos, seguidores novos</p>
   <div class="filters" data-target="crescimento">
     <button class="fbtn active" data-f="">Todos</button>
-    <button class="fbtn" data-f="1">Tipo 1 · Simples</button>
-    <button class="fbtn" data-f="2">Tipo 2 · Autoral</button>
-    <button class="fbtn" data-f="3">Tipo 3 · Complexo</button>
+    <button class="fbtn" data-f="1" title="Trend ou formato pronto: quase não exige roteiro">Tipo 1 · Simples</button>
+    <button class="fbtn" data-f="2" title="Exige um pequeno desenvolvimento de roteiro">Tipo 2 · Autoral</button>
+    <button class="fbtn" data-f="3" title="Exige roteiro grande e produção maior">Tipo 3 · Complexo</button>
+  </div>
+  <div class="legenda">
+    <span><b>Simples</b> = trend/formato pronto, quase sem roteiro — grava hoje</span>
+    <span><b>Autoral</b> = exige um pequeno roteiro adaptado antes de gravar</span>
+    <span><b>Complexo</b> = roteiro grande, várias cenas/personagens — planejar antes</span>
   </div>
   <div class="grid"><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#3</span> <span class="nome">⭐ Competição entre mulheres (sketch)</span></div>
@@ -420,9 +435,14 @@
   <p class="objdef"><b>Objetivo:</b> Fazer quem já chegou acreditar que o cookie é bom e que existe gente de verdade ali. &nbsp;·&nbsp; <b>Métrica:</b> Retenção, salvamentos, “preciso provar isso”</p>
   <div class="filters" data-target="confianca">
     <button class="fbtn active" data-f="">Todos</button>
-    <button class="fbtn" data-f="1">Tipo 1 · Simples</button>
-    <button class="fbtn" data-f="2">Tipo 2 · Autoral</button>
-    <button class="fbtn" data-f="3">Tipo 3 · Complexo</button>
+    <button class="fbtn" data-f="1" title="Trend ou formato pronto: quase não exige roteiro">Tipo 1 · Simples</button>
+    <button class="fbtn" data-f="2" title="Exige um pequeno desenvolvimento de roteiro">Tipo 2 · Autoral</button>
+    <button class="fbtn" data-f="3" title="Exige roteiro grande e produção maior">Tipo 3 · Complexo</button>
+  </div>
+  <div class="legenda">
+    <span><b>Simples</b> = trend/formato pronto, quase sem roteiro — grava hoje</span>
+    <span><b>Autoral</b> = exige um pequeno roteiro adaptado antes de gravar</span>
+    <span><b>Complexo</b> = roteiro grande, várias cenas/personagens — planejar antes</span>
   </div>
   <div class="grid"><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#9</span> <span class="nome">Degustação na rua com feedback real</span></div>
@@ -550,9 +570,14 @@
   <p class="objdef"><b>Objetivo:</b> Dar um motivo concreto para comprar HOJE. &nbsp;·&nbsp; <b>Métrica:</b> Movimento na loja, pedidos, cliques</p>
   <div class="filters" data-target="venda">
     <button class="fbtn active" data-f="">Todos</button>
-    <button class="fbtn" data-f="1">Tipo 1 · Simples</button>
-    <button class="fbtn" data-f="2">Tipo 2 · Autoral</button>
-    <button class="fbtn" data-f="3">Tipo 3 · Complexo</button>
+    <button class="fbtn" data-f="1" title="Trend ou formato pronto: quase não exige roteiro">Tipo 1 · Simples</button>
+    <button class="fbtn" data-f="2" title="Exige um pequeno desenvolvimento de roteiro">Tipo 2 · Autoral</button>
+    <button class="fbtn" data-f="3" title="Exige roteiro grande e produção maior">Tipo 3 · Complexo</button>
+  </div>
+  <div class="legenda">
+    <span><b>Simples</b> = trend/formato pronto, quase sem roteiro — grava hoje</span>
+    <span><b>Autoral</b> = exige um pequeno roteiro adaptado antes de gravar</span>
+    <span><b>Complexo</b> = roteiro grande, várias cenas/personagens — planejar antes</span>
   </div>
   <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#1</span> <span class="nome">Toda sobremesa = cookie</span></div>
