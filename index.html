@@ -21,9 +21,13 @@
   table.def th { background: #6b3f1d; color: #fff; padding: 8px 10px; text-align: left; }
   table.def td { border: 1px solid #e8dccc; padding: 8px 10px; vertical-align: top; }
   table.def tr:nth-child(even) td { background: #f5ebdf; }
-  nav.toc { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 8px 0 4px; }
-  nav.toc a { text-decoration: none; font-weight: 700; padding: 9px 18px; border-radius: 999px; background: #fff; border: 1px solid #e8dccc; color: #6b3f1d; }
-  .tabbar { position: sticky; top: 0; z-index: 6; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; padding: 12px 8px; margin-top: 34px; background: #faf6f0; border-bottom: 2px solid #e8dccc; }
+  nav.toc { position: sticky; top: 0; z-index: 8; background: #faf6f0; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; padding: 10px 0; margin: 8px 0 4px; border-bottom: 2px solid #e8dccc; }
+  .vtab { font-weight: 700; font-size: 1rem; padding: 10px 22px; border-radius: 999px; background: #fff; border: 2px solid #e8dccc; color: #6b3f1d; cursor: pointer; }
+  .vtab.active { background: #6b3f1d; border-color: #6b3f1d; color: #fff; }
+  .view { display: none; }
+  .view.active { display: block; }
+  .tabbar { position: sticky; top: 58px; z-index: 6; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; padding: 12px 8px; margin-top: 20px; background: #faf6f0; border-bottom: 2px solid #e8dccc; }
+  .semrow td { background: #6b3f1d !important; color: #fff; font-weight: 700; letter-spacing: .08em; font-size: .8rem; }
   .tab { border: 2px solid #e8dccc; background: #fff; color: #6b3f1d; font-size: 1rem; font-weight: 700; padding: 10px 22px; border-radius: 999px; cursor: pointer; }
   .tab.active { background: var(--tabcor); border-color: var(--tabcor); color: #fff; }
   .tab .tcount { font-size: .78rem; opacity: .8; margin-left: 4px; }
@@ -102,12 +106,12 @@
 </header>
 
 <nav class="toc">
-  <a href="#briefing">📋 O briefing</a>
-  <a href="#exemplos">▶ Os 9 exemplos</a>
-  <a href="#mes1">📅 Mês 1 (7-4)</a>
-  <a href="#explorar">🎬 Mais vídeos</a>
+  <button class="vtab active" data-view="view-briefing">📋 Briefing</button>
+  <button class="vtab" data-view="view-plan">📅 Planejamento (Mês 1 · 7-4)</button>
+  <button class="vtab" data-view="view-banco">🎬 Banco de vídeos</button>
 </nav>
 
+<div class="view active" id="view-briefing">
 <div class="box" id="briefing">
   <h2>1. O objetivo deste projeto</h2>
   <p class="lead">Aumentar a margem líquida e o lucro líquido do negócio, através do aumento das vendas de Loja — o canal que possui a margem maior.</p>
@@ -275,7 +279,9 @@
 </div></div>
 </div>
 </section>
+</div>
 
+<div class="view" id="view-plan">
 <section class="mes1" id="mes1">
   <h2 class="secmain">📅 Mês 1 — Estratégia 7-4</h2>
   <p class="secsub">Método: testar <b>7 formatos, com 4 vídeos cada</b> (28 posts em 30 dias), respeitando o mix 7 crescimento / 2 confiança / 1 venda. No mês 2, o formato que passar de <b>2x a média de views</b> dobra para 8 vídeos, e o pior sai.</p>
@@ -899,9 +905,21 @@
 </div></div>
 </details>
 </div>
+  <h3 class="exhead" style="color:#6b3f1d">📆 Cronograma de postagem — todos os vídeos</h3>
+<p class="objdef">Fase A: <b>5 semanas, 33 posts</b>, com o mix 7/2/1 exato e rotação de formatos (nenhum formato repete em dias seguidos no início). Os 14 vídeos restantes ficam de <b>estoque</b> abaixo — eles entram como as cotas de confiança/venda das semanas seguintes.</p>
+<div style="overflow-x:auto"><table class="fmttable">
+<tr><th>Post</th><th>Dia</th><th>Objetivo</th><th>Formato</th><th>Vídeo</th><th>Feito</th></tr>
+<tr class="semrow"><td colspan="6">SEMANA 1</td></tr><tr><td class="ctr">1</td><td>Seg</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C1</b></td><td><b>#12</b> Puxa o cookie + falso justiceiro</td><td class="ctr">☐</td></tr><tr><td class="ctr">2</td><td>Ter</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C2</b></td><td><b>#13</b> Espírito sai do corpo</td><td class="ctr">☐</td></tr><tr><td class="ctr">3</td><td>Qua</td><td style="color:#35648C;font-weight:700">🤝 Confiança</td><td class="ctr"><b>F1</b></td><td><b>#9</b> Degustação na rua com feedback real</td><td class="ctr">☐</td></tr><tr><td class="ctr">4</td><td>Qui</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C3</b></td><td><b>#11</b> &quot;Igualmente&quot;</td><td class="ctr">☐</td></tr><tr><td class="ctr">5</td><td>Sex</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C4</b></td><td><b>#51</b> Desafio MrBeast</td><td class="ctr">☐</td></tr><tr><td class="ctr">6</td><td>Sáb</td><td style="color:#A66B1F;font-weight:700">💰 Venda</td><td class="ctr"><b>V1</b></td><td><b>#6</b> Irritada → cookie</td><td class="ctr">☐</td></tr><tr><td class="ctr">7</td><td>Dom</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C5</b></td><td><b>#18</b> Frases sem graça dos clientes</td><td class="ctr">☐</td></tr><tr class="semrow"><td colspan="6">SEMANA 2</td></tr><tr><td class="ctr">8</td><td>Seg</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C6</b></td><td><b>#33</b> Cookie cai: luto</td><td class="ctr">☐</td></tr><tr><td class="ctr">9</td><td>Ter</td><td style="color:#35648C;font-weight:700">🤝 Confiança</td><td class="ctr"><b>F2</b></td><td><b>#44</b> Dono escondido do amigo</td><td class="ctr">☐</td></tr><tr><td class="ctr">10</td><td>Qua</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C7</b></td><td><b>#43</b> Pesadelo do cookie</td><td class="ctr">☐</td></tr><tr><td class="ctr">11</td><td>Qui</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C8</b></td><td><b>#34</b> Prompt de ChatGPT</td><td class="ctr">☐</td></tr><tr><td class="ctr">12</td><td>Sex</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C1</b></td><td><b>#23</b> Golpe da vaga</td><td class="ctr">☐</td></tr><tr><td class="ctr">13</td><td>Sáb</td><td style="color:#35648C;font-weight:700">🤝 Confiança</td><td class="ctr"><b>F3</b></td><td><b>#15</b> Troca o pedido por amor</td><td class="ctr">☐</td></tr><tr><td class="ctr">14</td><td>Dom</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C2</b></td><td><b>#28</b> Troca o namorado</td><td class="ctr">☐</td></tr><tr class="semrow"><td colspan="6">SEMANA 3</td></tr><tr><td class="ctr">15</td><td>Seg</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C3</b></td><td><b>#19</b> Não deixa dividir a conta</td><td class="ctr">☐</td></tr><tr><td class="ctr">16</td><td>Ter</td><td style="color:#A66B1F;font-weight:700">💰 Venda</td><td class="ctr"><b>V2</b></td><td><b>#14</b> Compra tudo, esquece o 1</td><td class="ctr">☐</td></tr><tr><td class="ctr">17</td><td>Qua</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C4</b></td><td><b>#54</b> Testemunho por café</td><td class="ctr">☐</td></tr><tr><td class="ctr">18</td><td>Qui</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C1</b></td><td><b>#24</b> Falsa gentileza</td><td class="ctr">☐</td></tr><tr><td class="ctr">19</td><td>Sex</td><td style="color:#35648C;font-weight:700">🤝 Confiança</td><td class="ctr"><b>F4</b></td><td><b>#26</b> Produção em massa (126 mil curtidas)</td><td class="ctr">☐</td></tr><tr><td class="ctr">20</td><td>Sáb</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C2</b></td><td><b>#36</b> Primeiro dia de atendente</td><td class="ctr">☐</td></tr><tr><td class="ctr">21</td><td>Dom</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C3</b></td><td><b>#20</b> Kit kids na hora da conta</td><td class="ctr">☐</td></tr><tr class="semrow"><td colspan="6">SEMANA 4</td></tr><tr><td class="ctr">22</td><td>Seg</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C1</b></td><td><b>#39</b> Leva o último cookie</td><td class="ctr">☐</td></tr><tr><td class="ctr">23</td><td>Ter</td><td style="color:#35648C;font-weight:700">🤝 Confiança</td><td class="ctr"><b>F5</b></td><td><b>#27</b> &quot;Marketing explica a produção&quot;</td><td class="ctr">☐</td></tr><tr><td class="ctr">24</td><td>Qua</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C2</b></td><td><b>#55</b> Papelzinho da vergonha</td><td class="ctr">☐</td></tr><tr><td class="ctr">25</td><td>Qui</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C3</b></td><td><b>#31a</b> &quot;Esse pedido não é o seu&quot;</td><td class="ctr">☐</td></tr><tr><td class="ctr">26</td><td>Sex</td><td style="color:#A66B1F;font-weight:700">💰 Venda</td><td class="ctr"><b>V3</b></td><td><b>#2</b> Acerte o preço e leve grátis</td><td class="ctr">☐</td></tr><tr><td class="ctr">27</td><td>Sáb</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C1</b></td><td><b>#42</b> Mordidinha fatal</td><td class="ctr">☐</td></tr><tr><td class="ctr">28</td><td>Dom</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C2</b></td><td><b>#57</b> &quot;Nossa&quot; = R$ 5 de desconto</td><td class="ctr">☐</td></tr><tr class="semrow"><td colspan="6">SEMANA 5</td></tr><tr><td class="ctr">29</td><td>Seg</td><td style="color:#35648C;font-weight:700">🤝 Confiança</td><td class="ctr"><b>F6</b></td><td><b>#49</b> Rito do funcionário (14 mil curtidas)</td><td class="ctr">☐</td></tr><tr><td class="ctr">30</td><td>Ter</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C1</b></td><td><b>#45</b> Mesa errada (2 referências)</td><td class="ctr">☐</td></tr><tr><td class="ctr">31</td><td>Qua</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C1</b></td><td><b>#5</b> Fila lenta (sketch na fila)</td><td class="ctr">☐</td></tr><tr><td class="ctr">32</td><td>Qui</td><td style="color:#3E7C4F;font-weight:700">🚀 Crescimento</td><td class="ctr"><b>C1</b></td><td><b>#48</b> Cortesia: &quot;traz aí&quot; (1,5 mi de views)</td><td class="ctr">☐</td></tr><tr><td class="ctr">33</td><td>Sex</td><td style="color:#35648C;font-weight:700">🤝 Confiança</td><td class="ctr"><b>F1</b></td><td><b>#52</b> Cookie na rua com nota</td><td class="ctr">☐</td></tr>
+</table></div>
+<p class="objdef"><b>📦 Estoque para as semanas seguintes</b> (entram como as próximas cotas do mix):<br>
+🤝 Confiança (2): #46 Chocolate na cara · #35 &quot;Meu amor&quot; para todos<br>
+💰 Venda (12): #37 &quot;Perdemos R$ 15&quot; · #31b &quot;Os 5 tipos de fome&quot; · #53 Molho &quot;botão de volume&quot; · #7 Escalada dos pretendentes · #47 Cookie de colorir · #25 Clipe viral + apresentação da loja · #1 Toda sobremesa = cookie · #22 &quot;Pra cookie tenho dinheiro&quot; · #56 Bolinha nos copos · #58 Bolinha no jarro (troco de 100) · #4 &quot;Morrendo&quot; de fome de doce · #41 &quot;Amigos?&quot;</p>
+<p class="objdef"><em>Por que sobram 12 de venda: o mix usa só 1 venda a cada 10 posts — com 12 em estoque, a cota de venda já está garantida por ~4 meses.</em></p>
 </section>
+</div>
 
-<h2 class="secmain" id="explorar">🎬 Mais vídeos para explorar</h2>
+<div class="view" id="view-banco">
+<h2 class="secmain" id="explorar">🎬 Banco de vídeos</h2>
 <p class="secsub">O banco completo de referências, organizado por objetivo. Use as abas e os filtros.</p>
 <div class="tabbar" id="tabs"><button class="tab active" data-tab="crescimento" style="--tabcor:#2e7d32">🚀 Crescimento <span class="tcount">27</span></button><button class="tab" data-tab="confianca" style="--tabcor:#1e5b8a">🤝 Confiança <span class="tcount">9</span></button><button class="tab" data-tab="venda" style="--tabcor:#b8862d">💰 Venda <span class="tcount">14</span></button></div>
 
@@ -1500,11 +1518,21 @@
   </div>
 </div></div>
 </section>
+</div>
 
 <footer>Banco de Vídeos Virais Holy Cookie · 58 vídeos · os players carregam conforme você rola a página (requer internet)</footer>
 </div>
 
 <script>
+document.querySelectorAll(".vtab").forEach(function(t) {
+  t.addEventListener("click", function() {
+    document.querySelectorAll(".vtab").forEach(function(b) { b.classList.remove("active"); });
+    document.querySelectorAll(".view").forEach(function(v) { v.classList.remove("active"); });
+    t.classList.add("active");
+    document.getElementById(t.dataset.view).classList.add("active");
+    window.scrollTo({top: 0});
+  });
+});
 function lerPicks() {
   try { return JSON.parse(localStorage.getItem("hc_picks") || "[]"); } catch (e) { return []; }
 }
