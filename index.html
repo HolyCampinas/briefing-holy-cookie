@@ -36,6 +36,10 @@
   .legenda { display: flex; gap: 14px; flex-wrap: wrap; font-size: .78rem; color: #8a6d55; margin: -6px 0 16px; }
   .legenda span { background: #fff; border: 1px solid #e8dccc; border-radius: 8px; padding: 4px 10px; }
   .box.modelo { border: 2px solid #b8862d; background: #fdf8ee; }
+  .subsec { font-size: 1.1rem; color: #6b3f1d; margin: 18px 0 12px; }
+  .subsec.ref { margin-top: 34px; border-top: 1px solid #e8dccc; padding-top: 22px; }
+  .card.destaque { border: 2px solid #b8862d; box-shadow: 0 2px 10px rgba(184,134,45,.18); }
+  .badge.bex { color: #fff; background: #b8862d; }
   .modelolink { display: inline-block; text-decoration: none; font-weight: 700; color: #fff; background: #b8862d; padding: 10px 22px; border-radius: 999px; }
   .modelolink:hover { background: #6b3f1d; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 18px; }
@@ -127,6 +131,39 @@
 
 <section id="crescimento" class="tabpane active">
   <p class="objdef"><b>Objetivo:</b> Fazer quem NUNCA ouviu falar da Holy Cookie assistir, compartilhar e seguir. &nbsp;·&nbsp; <b>Métrica:</b> Alcance, compartilhamentos, seguidores novos</p>
+  <h3 class="subsec">▶ Comece por estes 3 exemplos</h3>
+  <div class="grid"><div class="card destaque" data-tipo="1">
+  <div class="cardhead"><span class="num">#12</span> <span class="nome">⭐ Puxa o cookie + falso justiceiro</span></div>
+  <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/jonathannemer/" target="_blank" rel="noopener">@jonathannemer</a><span class="met vazio">métricas: preencher no app</span></div>
+  <div class="player"><iframe src="https://www.instagram.com/p/DY2BX6fxtlr/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
+  <div class="cardbody">
+    <p><b>Por que viralizou:</b> Twist duplo: o &quot;justiceiro&quot; que tomaria satisfação entra na zoeira</p>
+    <p class="sug"><b>🍪 Nossa versão:</b> Atendente de uniforme &quot;intervém&quot;... e puxa o cookie também</p>
+    <a class="iglink" href="https://www.instagram.com/p/DY2BX6fxtlr/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
+  </div>
+</div><div class="card destaque" data-tipo="1">
+  <div class="cardhead"><span class="num">#11</span> <span class="nome">&quot;Igualmente&quot;</span></div>
+  <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/opaocaseirodeamargosa/" target="_blank" rel="noopener">@opaocaseirodeamargosa</a><span class="met vazio">métricas: preencher no app</span></div>
+  <div class="player"><iframe src="https://www.instagram.com/p/DY4uyIkhZ57/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
+  <div class="cardbody">
+    <p><b>Por que viralizou:</b> Mico universal (responder &quot;igualmente&quot; errado) + virada literal</p>
+    <p class="sug"><b>🍪 Nossa versão:</b> &quot;Aproveite!&quot; / &quot;Igualmente!&quot; → corte: atendente comendo junto com o cliente</p>
+    <a class="iglink" href="https://www.instagram.com/p/DY4uyIkhZ57/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
+  </div>
+</div><div class="card destaque" data-tipo="1">
+  <div class="cardhead"><span class="num">#42</span> <span class="nome">Mordidinha fatal</span></div>
+  <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/brunaayraa/" target="_blank" rel="noopener">@brunaayraa</a><span class="met vazio">métricas: preencher no app</span></div>
+  <div class="player"><iframe src="https://www.instagram.com/p/DXsbb1RjM00/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
+  <div class="cardbody">
+    <p><b>Por que viralizou:</b> &quot;Posso dar uma mordida?&quot; → devolve só a casquinha; punchline visual</p>
+    <p class="sug"><b>🍪 Nossa versão:</b> Já é cookie-nativo: gravar igual; fecho: ela compra outro só dela</p>
+    <a class="iglink" href="https://www.instagram.com/p/DXsbb1RjM00/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
+  </div>
+</div></div>
+  <h3 class="subsec ref">Banco de referências (27 vídeos)</h3>
   <div class="filters" data-target="crescimento">
     <button class="fbtn active" data-f="">Todos</button>
     <button class="fbtn" data-f="1" title="Trend ou formato pronto: quase não exige roteiro">Tipo 1 · Simples</button>
@@ -157,26 +194,6 @@
     <p><b>Por que viralizou:</b> Correção do Fred: a loja é só pano de fundo da sketch; não se fala nada do produto — vídeo indireto</p>
     <p class="sug"><b>🍪 Nossa versão:</b> Sketch da fila com a loja de cenário; usar o kit de exposição indireta (uniforme, vitrine, embalagens nas mesas)</p>
     <a class="iglink" href="https://www.instagram.com/reels/DZIUveAB3mv/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
-  </div>
-</div><div class="card" data-tipo="1">
-  <div class="cardhead"><span class="num">#11</span> <span class="nome">&quot;Igualmente&quot;</span></div>
-  <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
-  <div class="meta"><a class="autor" href="https://www.instagram.com/opaocaseirodeamargosa/" target="_blank" rel="noopener">@opaocaseirodeamargosa</a><span class="met vazio">métricas: preencher no app</span></div>
-  <div class="player"><iframe src="https://www.instagram.com/p/DY4uyIkhZ57/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
-  <div class="cardbody">
-    <p><b>Por que viralizou:</b> Mico universal (responder &quot;igualmente&quot; errado) + virada literal</p>
-    <p class="sug"><b>🍪 Nossa versão:</b> &quot;Aproveite!&quot; / &quot;Igualmente!&quot; → corte: atendente comendo junto com o cliente</p>
-    <a class="iglink" href="https://www.instagram.com/p/DY4uyIkhZ57/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
-  </div>
-</div><div class="card" data-tipo="1">
-  <div class="cardhead"><span class="num">#12</span> <span class="nome">⭐ Puxa o cookie + falso justiceiro</span></div>
-  <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
-  <div class="meta"><a class="autor" href="https://www.instagram.com/jonathannemer/" target="_blank" rel="noopener">@jonathannemer</a><span class="met vazio">métricas: preencher no app</span></div>
-  <div class="player"><iframe src="https://www.instagram.com/p/DY2BX6fxtlr/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
-  <div class="cardbody">
-    <p><b>Por que viralizou:</b> Twist duplo: o &quot;justiceiro&quot; que tomaria satisfação entra na zoeira</p>
-    <p class="sug"><b>🍪 Nossa versão:</b> Atendente de uniforme &quot;intervém&quot;... e puxa o cookie também</p>
-    <a class="iglink" href="https://www.instagram.com/p/DY2BX6fxtlr/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#13</span> <span class="nome">Espírito sai do corpo</span></div>
@@ -348,16 +365,6 @@
     <p class="sug"><b>🍪 Nossa versão:</b> Toda resposta converge para cookie; legenda: &quot;testa com seu marido&quot;</p>
     <a class="iglink" href="https://www.instagram.com/p/DXfo_uxDUY4/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
   </div>
-</div><div class="card" data-tipo="1">
-  <div class="cardhead"><span class="num">#42</span> <span class="nome">Mordidinha fatal</span></div>
-  <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
-  <div class="meta"><a class="autor" href="https://www.instagram.com/brunaayraa/" target="_blank" rel="noopener">@brunaayraa</a><span class="met vazio">métricas: preencher no app</span></div>
-  <div class="player"><iframe src="https://www.instagram.com/p/DXsbb1RjM00/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
-  <div class="cardbody">
-    <p><b>Por que viralizou:</b> &quot;Posso dar uma mordida?&quot; → devolve só a casquinha; punchline visual</p>
-    <p class="sug"><b>🍪 Nossa versão:</b> Já é cookie-nativo: gravar igual; fecho: ela compra outro só dela</p>
-    <a class="iglink" href="https://www.instagram.com/p/DXsbb1RjM00/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
-  </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#43</span> <span class="nome">Pesadelo do cookie</span></div>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
@@ -442,6 +449,39 @@
 </section>
 <section id="confianca" class="tabpane">
   <p class="objdef"><b>Objetivo:</b> Fazer quem já chegou acreditar que o cookie é bom e que existe gente de verdade ali. &nbsp;·&nbsp; <b>Métrica:</b> Retenção, salvamentos, “preciso provar isso”</p>
+  <h3 class="subsec">▶ Comece por estes 3 exemplos</h3>
+  <div class="grid"><div class="card destaque" data-tipo="2">
+  <div class="cardhead"><span class="num">#49</span> <span class="nome">Rito do funcionário (14 mil curtidas)</span></div>
+  <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/baudelairecookies/" target="_blank" rel="noopener">@baudelairecookies</a><span class="met" title="curtidas">❤️ 14 mil</span></div>
+  <div class="player"><iframe src="https://www.instagram.com/p/DZ7hImEOcXt/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
+  <div class="cardbody">
+    <p><b>Por que viralizou:</b> Benchmark do nicho: novato prova o cardápio e registra impressões; prova social de quem vai vender</p>
+    <p class="sug"><b>🍪 Nossa versão:</b> Tradição de contratação: novato prova tudo, monta ranking; o favorito vira &quot;o cookie do Fulano&quot;</p>
+    <a class="iglink" href="https://www.instagram.com/p/DZ7hImEOcXt/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
+  </div>
+</div><div class="card destaque" data-tipo="2">
+  <div class="cardhead"><span class="num">#26</span> <span class="nome">Produção em massa (126 mil curtidas)</span></div>
+  <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/baudelairecookies/" target="_blank" rel="noopener">@baudelairecookies</a><span class="met" title="curtidas">❤️ 126 mil</span></div>
+  <div class="player"><iframe src="https://www.instagram.com/p/DR178yxDly_/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
+  <div class="cardbody">
+    <p><b>Por que viralizou:</b> Benchmark do nicho (4 mil cookies/dia): abundância + &quot;como é feito&quot; + escala = prova de qualidade</p>
+    <p class="sug"><b>🍪 Nossa versão:</b> Produção real com números reais da loja + quebra do cookie quente com chocolate escorrendo</p>
+    <a class="iglink" href="https://www.instagram.com/reels/DR178yxDly_/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
+  </div>
+</div><div class="card destaque" data-tipo="1">
+  <div class="cardhead"><span class="num">#9</span> <span class="nome">Degustação na rua com feedback real</span></div>
+  <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/dirohotdog/" target="_blank" rel="noopener">@dirohotdog</a><span class="met vazio">métricas: preencher no app</span></div>
+  <div class="player"><iframe src="https://www.instagram.com/p/DYTBo59pSrc/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
+  <div class="cardbody">
+    <p><b>Por que viralizou:</b> &quot;Qual é a pegadinha?&quot; — só mordida generosa e feedback REAL; reação autêntica é prova social que anúncio não compra</p>
+    <p class="sug"><b>🍪 Nossa versão:</b> Cookie grátis na rua/praça em troca de mordida generosa + feedback sincero; melhores reações viram série</p>
+    <a class="iglink" href="https://www.instagram.com/p/DYTBo59pSrc/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
+  </div>
+</div></div>
+  <h3 class="subsec ref">Banco de referências (9 vídeos)</h3>
   <div class="filters" data-target="confianca">
     <button class="fbtn active" data-f="">Todos</button>
     <button class="fbtn" data-f="1" title="Trend ou formato pronto: quase não exige roteiro">Tipo 1 · Simples</button>
@@ -453,17 +493,7 @@
     <span><b>Autoral</b> = exige um pequeno roteiro adaptado antes de gravar</span>
     <span><b>Complexo</b> = roteiro grande, várias cenas/personagens — planejar antes</span>
   </div>
-  <div class="grid"><div class="card" data-tipo="1">
-  <div class="cardhead"><span class="num">#9</span> <span class="nome">Degustação na rua com feedback real</span></div>
-  <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
-  <div class="meta"><a class="autor" href="https://www.instagram.com/dirohotdog/" target="_blank" rel="noopener">@dirohotdog</a><span class="met vazio">métricas: preencher no app</span></div>
-  <div class="player"><iframe src="https://www.instagram.com/p/DYTBo59pSrc/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
-  <div class="cardbody">
-    <p><b>Por que viralizou:</b> &quot;Qual é a pegadinha?&quot; — só mordida generosa e feedback REAL; reação autêntica é prova social que anúncio não compra</p>
-    <p class="sug"><b>🍪 Nossa versão:</b> Cookie grátis na rua/praça em troca de mordida generosa + feedback sincero; melhores reações viram série</p>
-    <a class="iglink" href="https://www.instagram.com/p/DYTBo59pSrc/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
-  </div>
-</div><div class="card" data-tipo="3">
+  <div class="grid"><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#10</span> <span class="nome">Rap da produção</span></div>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/padariapurotrigo/" target="_blank" rel="noopener">@padariapurotrigo</a><span class="met vazio">métricas: preencher no app</span></div>
@@ -482,16 +512,6 @@
     <p><b>Por que viralizou:</b> Wholesome: gesto silencioso de amor emociona; casais se marcam (&quot;aprende&quot;)</p>
     <p class="sug"><b>🍪 Nossa versão:</b> Ele troca o pedido para ela comer o sabor favorito; &quot;quem te ama sabe seu sabor favorito&quot;</p>
     <a class="iglink" href="https://www.instagram.com/p/DYpr2B7Pvlh/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
-  </div>
-</div><div class="card" data-tipo="2">
-  <div class="cardhead"><span class="num">#26</span> <span class="nome">Produção em massa (126 mil curtidas)</span></div>
-  <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
-  <div class="meta"><a class="autor" href="https://www.instagram.com/baudelairecookies/" target="_blank" rel="noopener">@baudelairecookies</a><span class="met" title="curtidas">❤️ 126 mil</span></div>
-  <div class="player"><iframe src="https://www.instagram.com/p/DR178yxDly_/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
-  <div class="cardbody">
-    <p><b>Por que viralizou:</b> Benchmark do nicho (4 mil cookies/dia): abundância + &quot;como é feito&quot; + escala = prova de qualidade</p>
-    <p class="sug"><b>🍪 Nossa versão:</b> Produção real com números reais da loja + quebra do cookie quente com chocolate escorrendo</p>
-    <a class="iglink" href="https://www.instagram.com/reels/DR178yxDly_/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#27</span> <span class="nome">&quot;Marketing explica a produção&quot;</span></div>
@@ -553,16 +573,6 @@
     <p class="sug"><b>🍪 Nossa versão:</b> Boca de chocolate negando → colega pior ainda → gerente &quot;imaculado&quot; com papel no uniforme</p>
     <a class="iglink" href="https://www.instagram.com/p/DW9nMbQAB4c/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
   </div>
-</div><div class="card" data-tipo="2">
-  <div class="cardhead"><span class="num">#49</span> <span class="nome">Rito do funcionário (14 mil curtidas)</span></div>
-  <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
-  <div class="meta"><a class="autor" href="https://www.instagram.com/baudelairecookies/" target="_blank" rel="noopener">@baudelairecookies</a><span class="met" title="curtidas">❤️ 14 mil</span></div>
-  <div class="player"><iframe src="https://www.instagram.com/p/DZ7hImEOcXt/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
-  <div class="cardbody">
-    <p><b>Por que viralizou:</b> Benchmark do nicho: novato prova o cardápio e registra impressões; prova social de quem vai vender</p>
-    <p class="sug"><b>🍪 Nossa versão:</b> Tradição de contratação: novato prova tudo, monta ranking; o favorito vira &quot;o cookie do Fulano&quot;</p>
-    <a class="iglink" href="https://www.instagram.com/p/DZ7hImEOcXt/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
-  </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#52</span> <span class="nome">Cookie na rua com nota</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
@@ -577,6 +587,39 @@
 </section>
 <section id="venda" class="tabpane">
   <p class="objdef"><b>Objetivo:</b> Dar um motivo concreto para comprar HOJE. &nbsp;·&nbsp; <b>Métrica:</b> Movimento na loja, pedidos, cliques</p>
+  <h3 class="subsec">▶ Comece por estes 3 exemplos</h3>
+  <div class="grid"><div class="card destaque" data-tipo="1">
+  <div class="cardhead"><span class="num">#41</span> <span class="nome">&quot;Amigos?&quot;</span></div>
+  <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><span class="autor vazio">perfil a identificar</span><span class="met vazio">métricas: preencher no app</span></div>
+  <div class="player"><iframe src="https://www.instagram.com/p/DZpxfc4Bgts/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
+  <div class="cardbody">
+    <p><b>Por que viralizou:</b> 3 milkshakes para 1 pessoa: gula sem culpa normaliza consumo maior. 2 falas, 1 take</p>
+    <p class="sug"><b>🍪 Nossa versão:</b> &quot;Pra você e sua família!&quot; / &quot;Família?&quot; — come a caixa de 6 sozinha</p>
+    <a class="iglink" href="https://www.instagram.com/p/DZpxfc4Bgts/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
+  </div>
+</div><div class="card destaque" data-tipo="1">
+  <div class="cardhead"><span class="num">#6</span> <span class="nome">Irritada → cookie</span></div>
+  <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/maddy_macrae_/" target="_blank" rel="noopener">@maddy_macrae_</a><span class="met vazio">métricas: preencher no app</span></div>
+  <div class="player"><iframe src="https://www.instagram.com/p/DZHvmSiPEH5/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
+  <div class="cardbody">
+    <p><b>Por que viralizou:</b> Desabafo relatable + virada instantânea de humor ao receber o produto</p>
+    <p class="sug"><b>🍪 Nossa versão:</b> &quot;Tô irritada!&quot; → desabafo → cookie → humor vira. Série: cada episódio um dia ruim diferente</p>
+    <a class="iglink" href="https://www.instagram.com/p/DZHvmSiPEH5/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
+  </div>
+</div><div class="card destaque" data-tipo="1">
+  <div class="cardhead"><span class="num">#31b</span> <span class="nome">&quot;Os 5 tipos de fome&quot;</span></div>
+  <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
+  <div class="meta"><a class="autor" href="https://www.instagram.com/laistranches/" target="_blank" rel="noopener">@laistranches</a><span class="met vazio">métricas: preencher no app</span></div>
+  <div class="player"><iframe src="https://www.instagram.com/p/DZm7fkapcCE/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
+  <div class="cardbody">
+    <p><b>Por que viralizou:</b> Taxonomia divertida que desfila o cardápio com desculpa criativa</p>
+    <p class="sug"><b>🍪 Nossa versão:</b> &quot;5 tipos de vontade de cookie&quot;: pós-almoço, madrugada, dia ruim, comemorar, dividir</p>
+    <a class="iglink" href="https://www.instagram.com/p/DZm7fkapcCE/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
+  </div>
+</div></div>
+  <h3 class="subsec ref">Banco de referências (14 vídeos)</h3>
   <div class="filters" data-target="venda">
     <button class="fbtn active" data-f="">Todos</button>
     <button class="fbtn" data-f="1" title="Trend ou formato pronto: quase não exige roteiro">Tipo 1 · Simples</button>
@@ -617,16 +660,6 @@
     <p><b>Por que viralizou:</b> Drama → twist: estava &quot;morrendo&quot; de fome; o estabelecimento é a salvação</p>
     <p class="sug"><b>🍪 Nossa versão:</b> &quot;Crise&quot; dramática → era abstinência de doce → apontam a Holy Cookie como socorro</p>
     <a class="iglink" href="https://www.instagram.com/p/DT-0843DfeZ/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
-  </div>
-</div><div class="card" data-tipo="1">
-  <div class="cardhead"><span class="num">#6</span> <span class="nome">Irritada → cookie</span></div>
-  <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
-  <div class="meta"><a class="autor" href="https://www.instagram.com/maddy_macrae_/" target="_blank" rel="noopener">@maddy_macrae_</a><span class="met vazio">métricas: preencher no app</span></div>
-  <div class="player"><iframe src="https://www.instagram.com/p/DZHvmSiPEH5/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
-  <div class="cardbody">
-    <p><b>Por que viralizou:</b> Desabafo relatable + virada instantânea de humor ao receber o produto</p>
-    <p class="sug"><b>🍪 Nossa versão:</b> &quot;Tô irritada!&quot; → desabafo → cookie → humor vira. Série: cada episódio um dia ruim diferente</p>
-    <a class="iglink" href="https://www.instagram.com/p/DZHvmSiPEH5/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#7</span> <span class="nome">Escalada dos pretendentes</span></div>
@@ -679,16 +712,6 @@
     <a class="iglink" href="https://www.instagram.com/reels/DUO0ZzBDndH/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
   </div>
 </div><div class="card" data-tipo="1">
-  <div class="cardhead"><span class="num">#31b</span> <span class="nome">&quot;Os 5 tipos de fome&quot;</span></div>
-  <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
-  <div class="meta"><a class="autor" href="https://www.instagram.com/laistranches/" target="_blank" rel="noopener">@laistranches</a><span class="met vazio">métricas: preencher no app</span></div>
-  <div class="player"><iframe src="https://www.instagram.com/p/DZm7fkapcCE/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
-  <div class="cardbody">
-    <p><b>Por que viralizou:</b> Taxonomia divertida que desfila o cardápio com desculpa criativa</p>
-    <p class="sug"><b>🍪 Nossa versão:</b> &quot;5 tipos de vontade de cookie&quot;: pós-almoço, madrugada, dia ruim, comemorar, dividir</p>
-    <a class="iglink" href="https://www.instagram.com/p/DZm7fkapcCE/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
-  </div>
-</div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#37</span> <span class="nome">&quot;Perdemos R$ 15&quot;</span></div>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/gameworldindiana/" target="_blank" rel="noopener">@gameworldindiana</a><span class="met vazio">métricas: preencher no app</span></div>
@@ -707,16 +730,6 @@
     <p><b>Por que viralizou:</b> O esforço absurdo precifica o produto; a marca é o punchline final</p>
     <p class="sug"><b>🍪 Nossa versão:</b> Persegue o ladrão da sacola: &quot;tudo isso por um lanche?&quot; / &quot;Não é um lanche. É um HOLY COOKIE&quot;</p>
     <a class="iglink" href="https://www.instagram.com/p/DZnZYJAxZKg/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
-  </div>
-</div><div class="card" data-tipo="1">
-  <div class="cardhead"><span class="num">#41</span> <span class="nome">&quot;Amigos?&quot;</span></div>
-  <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
-  <div class="meta"><span class="autor vazio">perfil a identificar</span><span class="met vazio">métricas: preencher no app</span></div>
-  <div class="player"><iframe src="https://www.instagram.com/p/DZpxfc4Bgts/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
-  <div class="cardbody">
-    <p><b>Por que viralizou:</b> 3 milkshakes para 1 pessoa: gula sem culpa normaliza consumo maior. 2 falas, 1 take</p>
-    <p class="sug"><b>🍪 Nossa versão:</b> &quot;Pra você e sua família!&quot; / &quot;Família?&quot; — come a caixa de 6 sozinha</p>
-    <a class="iglink" href="https://www.instagram.com/p/DZpxfc4Bgts/" target="_blank" rel="noopener">abrir no Instagram ↗</a>
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#47</span> <span class="nome">Cookie de colorir</span></div>
