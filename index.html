@@ -55,6 +55,14 @@
   details.fmt[open] summary { border-bottom: 1px solid #e8dccc; }
   details.fmt .grid { padding: 14px; }
   .fqtd { color: #8a6d55; font-size: .8rem; font-weight: 400; margin-left: 6px; }
+  .pick { display: block; margin: 4px 14px 8px; font-size: .84rem; font-weight: 700; color: #2e7d32; cursor: pointer; background: #f0f7f1; border: 1px solid #cfe3d2; border-radius: 8px; padding: 6px 10px; }
+  .pick input { accent-color: #2e7d32; margin-right: 4px; }
+  .card:has(.pickbox:checked) { outline: 3px solid #2e7d32; }
+  .selbox { background: #fff; border: 2px solid #2e7d32; border-radius: 14px; padding: 16px 20px; margin: 14px 0 6px; }
+  .selbox h3 { color: #2e7d32; margin-bottom: 8px; }
+  .sellist { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; font-size: .85rem; }
+  .sellist .selchip { background: #f0f7f1; border: 1px solid #cfe3d2; color: #2e7d32; font-weight: 700; border-radius: 999px; padding: 4px 12px; }
+  .selnota { font-size: .75rem; color: #8a6d55; margin-left: 10px; }
   .modelolink { display: inline-block; text-decoration: none; font-weight: 700; color: #fff; background: #b8862d; padding: 10px 22px; border-radius: 999px; }
   .modelolink:hover { background: #6b3f1d; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 18px; }
@@ -153,6 +161,7 @@
   <p class="objdef"><b>Objetivo:</b> Fazer quem NUNCA ouviu falar da Holy Cookie assistir, compartilhar e seguir. &nbsp;·&nbsp; <b>Métrica:</b> Alcance, compartilhamentos, seguidores novos</p>
   <div class="grid"><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#12</span> <span class="nome">⭐ Puxa o cookie + falso justiceiro</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="12" data-nome="Puxa o cookie + falso justiceiro"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/jonathannemer/" target="_blank" rel="noopener">@jonathannemer</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DY2BX6fxtlr/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -163,6 +172,7 @@
   </div>
 </div><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#11</span> <span class="nome">&quot;Igualmente&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="11" data-nome="&quot;Igualmente&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/opaocaseirodeamargosa/" target="_blank" rel="noopener">@opaocaseirodeamargosa</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DY4uyIkhZ57/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -173,6 +183,7 @@
   </div>
 </div><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#42</span> <span class="nome">Mordidinha fatal</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="42" data-nome="Mordidinha fatal"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/brunaayraa/" target="_blank" rel="noopener">@brunaayraa</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXsbb1RjM00/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -188,6 +199,7 @@
   <p class="objdef"><b>Objetivo:</b> Fazer quem já chegou acreditar que o cookie é bom e que existe gente de verdade ali. &nbsp;·&nbsp; <b>Métrica:</b> Retenção, salvamentos, “preciso provar isso”</p>
   <div class="grid"><div class="card destaque" data-tipo="2">
   <div class="cardhead"><span class="num">#49</span> <span class="nome">Rito do funcionário (14 mil curtidas)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="49" data-nome="Rito do funcionário (14 mil curtidas)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/baudelairecookies/" target="_blank" rel="noopener">@baudelairecookies</a><span class="met" title="curtidas">❤️ 14 mil</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZ7hImEOcXt/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -198,6 +210,7 @@
   </div>
 </div><div class="card destaque" data-tipo="2">
   <div class="cardhead"><span class="num">#26</span> <span class="nome">Produção em massa (126 mil curtidas)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="26" data-nome="Produção em massa (126 mil curtidas)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/baudelairecookies/" target="_blank" rel="noopener">@baudelairecookies</a><span class="met" title="curtidas">❤️ 126 mil</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DR178yxDly_/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -208,6 +221,7 @@
   </div>
 </div><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#9</span> <span class="nome">Degustação na rua com feedback real</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="9" data-nome="Degustação na rua com feedback real"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/dirohotdog/" target="_blank" rel="noopener">@dirohotdog</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYTBo59pSrc/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -223,6 +237,7 @@
   <p class="objdef"><b>Objetivo:</b> Dar um motivo concreto para comprar HOJE. &nbsp;·&nbsp; <b>Métrica:</b> Movimento na loja, pedidos, cliques</p>
   <div class="grid"><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#41</span> <span class="nome">&quot;Amigos?&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="41" data-nome="&quot;Amigos?&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><span class="autor vazio">perfil a identificar</span><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZpxfc4Bgts/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -233,6 +248,7 @@
   </div>
 </div><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#6</span> <span class="nome">Irritada → cookie</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="6" data-nome="Irritada → cookie"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/maddy_macrae_/" target="_blank" rel="noopener">@maddy_macrae_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZHvmSiPEH5/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -243,6 +259,7 @@
   </div>
 </div><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#31b</span> <span class="nome">&quot;Os 5 tipos de fome&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="31b" data-nome="&quot;Os 5 tipos de fome&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/laistranches/" target="_blank" rel="noopener">@laistranches</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZm7fkapcCE/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -258,7 +275,13 @@
 <section class="mes1" id="mes1">
   <h2 class="secmain">📅 Mês 1 — Estratégia 7-4</h2>
   <p class="secsub">Método: testar <b>7 formatos, com 4 vídeos cada</b> (28 posts em 30 dias), respeitando o mix 7 crescimento / 2 confiança / 1 venda. No mês 2, o formato que passar de <b>2x a média de views</b> dobra para 8 vídeos, e o pior sai.</p>
-  <p class="secsub">Abaixo, o inventário dos <b>23 formatos disponíveis</b> (só vídeos simples e autorais — os complexos ficam para depois). Clique em qualquer formato para assistir aos vídeos dele.</p>
+  <p class="secsub">Abaixo, o inventário dos <b>23 formatos disponíveis</b> (só vídeos simples e autorais — os complexos ficam para depois). Clique em qualquer formato para assistir aos vídeos dele e marque "✅ Quero fazer este" nos escolhidos.</p>
+  <div class="selbox" id="selbox">
+    <h3>✅ Selecionados: <span id="selcount">0</span></h3>
+    <div id="sellist" class="sellist"><em>Nenhum vídeo marcado ainda — abra um formato e marque "Quero fazer este".</em></div>
+    <button class="fbtn" onclick="copiarSelecao()">📋 Copiar lista</button>
+    <span class="selnota">A seleção fica salva neste navegador.</span>
+  </div>
   <div class="fmtbloco">
 <h3 class="exhead" style="color:#3E7C4F">🚀 Crescimento — 8 formatos · 23 vídeos</h3>
 <table class="fmttable">
@@ -270,6 +293,7 @@
 <summary><b>C1</b> — Sketch com twist (mini-história com virada) <span class="fqtd">6 simples + 2 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#12</span> <span class="nome">⭐ Puxa o cookie + falso justiceiro</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="12" data-nome="Puxa o cookie + falso justiceiro"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/jonathannemer/" target="_blank" rel="noopener">@jonathannemer</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DY2BX6fxtlr/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -280,6 +304,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#23</span> <span class="nome">Golpe da vaga</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="23" data-nome="Golpe da vaga"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/crumblverse/" target="_blank" rel="noopener">@crumblverse</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DRj_dMnjqQA/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -290,6 +315,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#24</span> <span class="nome">Falsa gentileza</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="24" data-nome="Falsa gentileza"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/colteliacai/" target="_blank" rel="noopener">@colteliacai</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXhUlLmjqq8/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -300,6 +326,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#39</span> <span class="nome">Leva o último cookie</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="39" data-nome="Leva o último cookie"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/bagelshopnashville/" target="_blank" rel="noopener">@bagelshopnashville</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXMcFqYggBL/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -310,6 +337,7 @@
   </div>
 </div><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#42</span> <span class="nome">Mordidinha fatal</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="42" data-nome="Mordidinha fatal"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/brunaayraa/" target="_blank" rel="noopener">@brunaayraa</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXsbb1RjM00/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -320,6 +348,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#45</span> <span class="nome">Mesa errada (2 referências)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="45" data-nome="Mesa errada (2 referências)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/60secondstonapoli/" target="_blank" rel="noopener">@60secondstonapoli</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXll7_hFNbR/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -330,6 +359,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#5</span> <span class="nome">Fila lenta (sketch na fila)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="5" data-nome="Fila lenta (sketch na fila)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/notsuitableforwork/" target="_blank" rel="noopener">@notsuitableforwork</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZIUveAB3mv/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -340,6 +370,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#48</span> <span class="nome">Cortesia: &quot;traz aí&quot; (1,5 mi de views)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="48" data-nome="Cortesia: &quot;traz aí&quot; (1,5 mi de views)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><span class="autor vazio">perfil a identificar</span><span class="met" title="views">👁 ~1,5 mi</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DWWVYR_jj-0/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -353,6 +384,7 @@
 <summary><b>C2</b> — Trend adaptada (estrutura de trend reconhecida) <span class="fqtd">5 simples · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#13</span> <span class="nome">Espírito sai do corpo</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="13" data-nome="Espírito sai do corpo"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/kris_pirozhkova/" target="_blank" rel="noopener">@kris_pirozhkova</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZGFb3txZwS/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -363,6 +395,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#28</span> <span class="nome">Troca o namorado</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="28" data-nome="Troca o namorado"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/browniepointuae/" target="_blank" rel="noopener">@browniepointuae</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DJwbBEQJr71/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -373,6 +406,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#36</span> <span class="nome">Primeiro dia de atendente</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="36" data-nome="Primeiro dia de atendente"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/gili.ribeiro/" target="_blank" rel="noopener">@gili.ribeiro</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DW7SjV0jhHg/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -383,6 +417,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#55</span> <span class="nome">Papelzinho da vergonha</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="55" data-nome="Papelzinho da vergonha"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/crumblverse/" target="_blank" rel="noopener">@crumblverse</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXZmBkEEUs8/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -393,6 +428,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#57</span> <span class="nome">&quot;Nossa&quot; = R$ 5 de desconto</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="57" data-nome="&quot;Nossa&quot; = R$ 5 de desconto"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/fabricadolancherp/" target="_blank" rel="noopener">@fabricadolancherp</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaTfCx4hCYj/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -406,6 +442,7 @@
 <summary><b>C3</b> — Meme de balcão (piada atendente × cliente) <span class="fqtd">4 simples · clique para assistir</span></summary>
 <div class="grid"><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#11</span> <span class="nome">&quot;Igualmente&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="11" data-nome="&quot;Igualmente&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/opaocaseirodeamargosa/" target="_blank" rel="noopener">@opaocaseirodeamargosa</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DY4uyIkhZ57/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -416,6 +453,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#19</span> <span class="nome">Não deixa dividir a conta</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="19" data-nome="Não deixa dividir a conta"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/anastasiiakay/" target="_blank" rel="noopener">@anastasiiakay</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYZlQjANizi/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -426,6 +464,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#20</span> <span class="nome">Kit kids na hora da conta</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="20" data-nome="Kit kids na hora da conta"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/quienesjuaan/" target="_blank" rel="noopener">@quienesjuaan</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZ6GPJYiYU-/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -436,6 +475,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#31a</span> <span class="nome">&quot;Esse pedido não é o seu&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="31a" data-nome="&quot;Esse pedido não é o seu&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/laistranches/" target="_blank" rel="noopener">@laistranches</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZm7fkapcCE/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -449,6 +489,7 @@
 <summary><b>C4</b> — Desafio/ação de rua <span class="fqtd">2 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#51</span> <span class="nome">Desafio MrBeast</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="51" data-nome="Desafio MrBeast"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/feastables/" target="_blank" rel="noopener">@feastables</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYfKJ_ixBpi/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -459,6 +500,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#54</span> <span class="nome">Testemunho por café</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="54" data-nome="Testemunho por café"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/lainocente.go/" target="_blank" rel="noopener">@lainocente.go</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaOB6ewITz-/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -472,6 +514,7 @@
 <summary><b>C5</b> — Compilação cômica (lista de situações) <span class="fqtd">1 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#18</span> <span class="nome">Frases sem graça dos clientes</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="18" data-nome="Frases sem graça dos clientes"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/acainograubacabal/" target="_blank" rel="noopener">@acainograubacabal</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYUzgmEuIFI/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -485,6 +528,7 @@
 <summary><b>C6</b> — Microtragédia (drama absurdo) <span class="fqtd">1 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#33</span> <span class="nome">Cookie cai: luto</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="33" data-nome="Cookie cai: luto"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/denis_deham/" target="_blank" rel="noopener">@denis_deham</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXQ85uYiN5m/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -498,6 +542,7 @@
 <summary><b>C7</b> — Personificação do produto <span class="fqtd">1 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#43</span> <span class="nome">Pesadelo do cookie</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="43" data-nome="Pesadelo do cookie"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/cityscapewinery/" target="_blank" rel="noopener">@cityscapewinery</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZOyCSrgpU5/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -511,6 +556,7 @@
 <summary><b>C8</b> — Analogia de bolha (piada de outra comunidade) <span class="fqtd">1 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#34</span> <span class="nome">Prompt de ChatGPT</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="34" data-nome="Prompt de ChatGPT"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/nathandoan/" target="_blank" rel="noopener">@nathandoan</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXxobECvUn9/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -533,6 +579,7 @@
 <summary><b>F1</b> — Reação real na rua (degustação/nota) <span class="fqtd">2 simples · clique para assistir</span></summary>
 <div class="grid"><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#9</span> <span class="nome">Degustação na rua com feedback real</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="9" data-nome="Degustação na rua com feedback real"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/dirohotdog/" target="_blank" rel="noopener">@dirohotdog</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYTBo59pSrc/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -543,6 +590,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#52</span> <span class="nome">Cookie na rua com nota</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="52" data-nome="Cookie na rua com nota"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/goodolcookie/" target="_blank" rel="noopener">@goodolcookie</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DVd_B18j8AS/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -556,6 +604,7 @@
 <summary><b>F2</b> — Sketch de equipe/dono (humor que humaniza) <span class="fqtd">2 simples · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#44</span> <span class="nome">Dono escondido do amigo</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="44" data-nome="Dono escondido do amigo"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/buzzcafeoficial/" target="_blank" rel="noopener">@buzzcafeoficial</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZIqo9COv7T/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -566,6 +615,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#46</span> <span class="nome">Chocolate na cara</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="46" data-nome="Chocolate na cara"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/sodiedocesniteroi_/" target="_blank" rel="noopener">@sodiedocesniteroi_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DW9nMbQAB4c/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -579,6 +629,7 @@
 <summary><b>F3</b> — Wholesome/afeto (emociona em vez de rir) <span class="fqtd">2 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#15</span> <span class="nome">Troca o pedido por amor</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="15" data-nome="Troca o pedido por amor"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/ladylaurencassidy/" target="_blank" rel="noopener">@ladylaurencassidy</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYpr2B7Pvlh/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -589,6 +640,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#35</span> <span class="nome">&quot;Meu amor&quot; para todos</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="35" data-nome="&quot;Meu amor&quot; para todos"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/wirisvianaoficial/" target="_blank" rel="noopener">@wirisvianaoficial</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXow9AADrsv/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -602,6 +654,7 @@
 <summary><b>F4</b> — Produção apresentada (bastidores sérios) <span class="fqtd">1 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card destaque" data-tipo="2">
   <div class="cardhead"><span class="num">#26</span> <span class="nome">Produção em massa (126 mil curtidas)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="26" data-nome="Produção em massa (126 mil curtidas)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/baudelairecookies/" target="_blank" rel="noopener">@baudelairecookies</a><span class="met" title="curtidas">❤️ 126 mil</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DR178yxDly_/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -615,6 +668,7 @@
 <summary><b>F5</b> — "Leigo explica" (bastidores cômicos) <span class="fqtd">1 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#27</span> <span class="nome">&quot;Marketing explica a produção&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="27" data-nome="&quot;Marketing explica a produção&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/bombonnicake/" target="_blank" rel="noopener">@bombonnicake</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DUdSSrrEVoe/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -628,6 +682,7 @@
 <summary><b>F6</b> — Rito do novato (equipe prova o produto) <span class="fqtd">1 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card destaque" data-tipo="2">
   <div class="cardhead"><span class="num">#49</span> <span class="nome">Rito do funcionário (14 mil curtidas)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="49" data-nome="Rito do funcionário (14 mil curtidas)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/baudelairecookies/" target="_blank" rel="noopener">@baudelairecookies</a><span class="met" title="curtidas">❤️ 14 mil</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZ7hImEOcXt/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -650,6 +705,7 @@
 <summary><b>V1</b> — Ocasião de consumo ("X pede cookie") <span class="fqtd">1 simples + 2 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#6</span> <span class="nome">Irritada → cookie</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="6" data-nome="Irritada → cookie"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/maddy_macrae_/" target="_blank" rel="noopener">@maddy_macrae_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZHvmSiPEH5/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -660,6 +716,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#1</span> <span class="nome">Toda sobremesa = cookie</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="1" data-nome="Toda sobremesa = cookie"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/expoiso_/" target="_blank" rel="noopener">@expoiso_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaCt1DMpEWw/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -670,6 +727,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#4</span> <span class="nome">&quot;Morrendo&quot; de fome de doce</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="4" data-nome="&quot;Morrendo&quot; de fome de doce"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/paodequeijomania_cinturaoverde/" target="_blank" rel="noopener">@paodequeijomania_cinturaoverde</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DT-0843DfeZ/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -683,6 +741,7 @@
 <summary><b>V2</b> — Objeção removida (gula sem culpa) <span class="fqtd">3 simples · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#14</span> <span class="nome">Compra tudo, esquece o 1</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="14" data-nome="Compra tudo, esquece o 1"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/vivabemsg/" target="_blank" rel="noopener">@vivabemsg</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZco-5KKkck/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -693,6 +752,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#22</span> <span class="nome">&quot;Pra cookie tenho dinheiro&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="22" data-nome="&quot;Pra cookie tenho dinheiro&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/kaka_placido/" target="_blank" rel="noopener">@kaka_placido</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DWUyYP7Dzx9/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -703,6 +763,7 @@
   </div>
 </div><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#41</span> <span class="nome">&quot;Amigos?&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="41" data-nome="&quot;Amigos?&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><span class="autor vazio">perfil a identificar</span><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZpxfc4Bgts/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -716,6 +777,7 @@
 <summary><b>V3</b> — Desafio interativo com prêmio <span class="fqtd">2 simples · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#2</span> <span class="nome">Acerte o preço e leve grátis</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="2" data-nome="Acerte o preço e leve grátis"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/theguy/" target="_blank" rel="noopener">@theguy</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaT2F8DNMv4/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -726,6 +788,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#56</span> <span class="nome">Bolinha nos copos</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="56" data-nome="Bolinha nos copos"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/mrbeastburgernz/" target="_blank" rel="noopener">@mrbeastburgernz</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYRVusymuZ4/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -739,6 +802,7 @@
 <summary><b>V4</b> — Matemática circular (venda esperta como piada) <span class="fqtd">2 simples · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#37</span> <span class="nome">&quot;Perdemos R$ 15&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="37" data-nome="&quot;Perdemos R$ 15&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/gameworldindiana/" target="_blank" rel="noopener">@gameworldindiana</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaEKmYtEdCX/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -749,6 +813,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#58</span> <span class="nome">Bolinha no jarro (troco de 100)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="58" data-nome="Bolinha no jarro (troco de 100)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><span class="autor vazio">perfil a identificar</span><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DX2dowGQkbr/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -762,6 +827,7 @@
 <summary><b>V5</b> — Lista de cardápio (taxonomia) <span class="fqtd">1 simples · clique para assistir</span></summary>
 <div class="grid"><div class="card destaque" data-tipo="1">
   <div class="cardhead"><span class="num">#31b</span> <span class="nome">&quot;Os 5 tipos de fome&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="31b" data-nome="&quot;Os 5 tipos de fome&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge bex">▶ exemplo — assista primeiro</span><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/laistranches/" target="_blank" rel="noopener">@laistranches</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZm7fkapcCE/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -775,6 +841,7 @@
 <summary><b>V6</b> — Abundância/food porn <span class="fqtd">1 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#53</span> <span class="nome">Molho &quot;botão de volume&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="53" data-nome="Molho &quot;botão de volume&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/joycelyn_e98/" target="_blank" rel="noopener">@joycelyn_e98</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DTysEuQEaJO/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -788,6 +855,7 @@
 <summary><b>V7</b> — Escalada de produto <span class="fqtd">1 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#7</span> <span class="nome">Escalada dos pretendentes</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="7" data-nome="Escalada dos pretendentes"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/samoflowersuz/" target="_blank" rel="noopener">@samoflowersuz</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZ0HBy_ImxK/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -801,6 +869,7 @@
 <summary><b>V8</b> — Produto novo em cena <span class="fqtd">1 simples · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#47</span> <span class="nome">Cookie de colorir</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="47" data-nome="Cookie de colorir"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/_camellia08_/" target="_blank" rel="noopener">@_camellia08_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZVBILkJfmv/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -814,6 +883,7 @@
 <summary><b>V9</b> — Clipe viral + apresentação da loja <span class="fqtd">1 autoral(is) · clique para assistir</span></summary>
 <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#25</span> <span class="nome">Clipe viral + apresentação da loja</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="25" data-nome="Clipe viral + apresentação da loja"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/judysfamilycafe/" target="_blank" rel="noopener">@judysfamilycafe</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DUO0ZzBDndH/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -846,6 +916,7 @@
   </div>
   <div class="grid"><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#3</span> <span class="nome">⭐ Competição entre mulheres (sketch)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="3" data-nome="Competição entre mulheres (sketch)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/tylerjohnperry/" target="_blank" rel="noopener">@tylerjohnperry</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZAvsiHof90/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -856,6 +927,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#5</span> <span class="nome">Fila lenta (sketch na fila)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="5" data-nome="Fila lenta (sketch na fila)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/notsuitableforwork/" target="_blank" rel="noopener">@notsuitableforwork</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZIUveAB3mv/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -866,6 +938,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#13</span> <span class="nome">Espírito sai do corpo</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="13" data-nome="Espírito sai do corpo"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/kris_pirozhkova/" target="_blank" rel="noopener">@kris_pirozhkova</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZGFb3txZwS/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -876,6 +949,7 @@
   </div>
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#16</span> <span class="nome">Minissérie (ref. 1, ep. 39)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="16" data-nome="Minissérie (ref. 1, ep. 39)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/winnie_thepooj/" target="_blank" rel="noopener">@winnie_thepooj</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DNYbQCIRWQ5/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -886,6 +960,7 @@
   </div>
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#17</span> <span class="nome">Minissérie (ref. 2)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="17" data-nome="Minissérie (ref. 2)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/roomiesroomiesroomies/" target="_blank" rel="noopener">@roomiesroomiesroomies</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DPnSSeLDL9K/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -896,6 +971,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#18</span> <span class="nome">Frases sem graça dos clientes</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="18" data-nome="Frases sem graça dos clientes"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/acainograubacabal/" target="_blank" rel="noopener">@acainograubacabal</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYUzgmEuIFI/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -906,6 +982,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#19</span> <span class="nome">Não deixa dividir a conta</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="19" data-nome="Não deixa dividir a conta"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/anastasiiakay/" target="_blank" rel="noopener">@anastasiiakay</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYZlQjANizi/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -916,6 +993,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#20</span> <span class="nome">Kit kids na hora da conta</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="20" data-nome="Kit kids na hora da conta"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/quienesjuaan/" target="_blank" rel="noopener">@quienesjuaan</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZ6GPJYiYU-/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -926,6 +1004,7 @@
   </div>
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#21</span> <span class="nome">Traição flagrada na loja</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="21" data-nome="Traição flagrada na loja"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/colteliacai/" target="_blank" rel="noopener">@colteliacai</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DVzOS5zESLu/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -936,6 +1015,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#23</span> <span class="nome">Golpe da vaga</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="23" data-nome="Golpe da vaga"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/crumblverse/" target="_blank" rel="noopener">@crumblverse</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DRj_dMnjqQA/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -946,6 +1026,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#24</span> <span class="nome">Falsa gentileza</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="24" data-nome="Falsa gentileza"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/colteliacai/" target="_blank" rel="noopener">@colteliacai</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXhUlLmjqq8/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -956,6 +1037,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#28</span> <span class="nome">Troca o namorado</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="28" data-nome="Troca o namorado"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/browniepointuae/" target="_blank" rel="noopener">@browniepointuae</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DJwbBEQJr71/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -966,6 +1048,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#31a</span> <span class="nome">&quot;Esse pedido não é o seu&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="31a" data-nome="&quot;Esse pedido não é o seu&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/laistranches/" target="_blank" rel="noopener">@laistranches</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZm7fkapcCE/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -976,6 +1059,7 @@
   </div>
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#32</span> <span class="nome">Bandido para na loja</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="32" data-nome="Bandido para na loja"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/funnymilk.tv/" target="_blank" rel="noopener">@funnymilk.tv</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXS5MMizkgX/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -986,6 +1070,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#33</span> <span class="nome">Cookie cai: luto</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="33" data-nome="Cookie cai: luto"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/denis_deham/" target="_blank" rel="noopener">@denis_deham</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXQ85uYiN5m/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -996,6 +1081,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#34</span> <span class="nome">Prompt de ChatGPT</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="34" data-nome="Prompt de ChatGPT"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/nathandoan/" target="_blank" rel="noopener">@nathandoan</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXxobECvUn9/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1006,6 +1092,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#36</span> <span class="nome">Primeiro dia de atendente</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="36" data-nome="Primeiro dia de atendente"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/gili.ribeiro/" target="_blank" rel="noopener">@gili.ribeiro</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DW7SjV0jhHg/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1016,6 +1103,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#39</span> <span class="nome">Leva o último cookie</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="39" data-nome="Leva o último cookie"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/bagelshopnashville/" target="_blank" rel="noopener">@bagelshopnashville</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXMcFqYggBL/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1026,6 +1114,7 @@
   </div>
 </div><div class="card off" data-tipo="">
   <div class="cardhead"><span class="num">#40</span> <span class="nome">Funil de perguntas do casal (DESCARTADO pelo Fred)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="40" data-nome="Funil de perguntas do casal (DESCARTADO pelo Fred)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">❌ Descartado</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/eatitkatie/" target="_blank" rel="noopener">@eatitkatie</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXfo_uxDUY4/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1036,6 +1125,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#43</span> <span class="nome">Pesadelo do cookie</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="43" data-nome="Pesadelo do cookie"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/cityscapewinery/" target="_blank" rel="noopener">@cityscapewinery</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZOyCSrgpU5/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1046,6 +1136,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#45</span> <span class="nome">Mesa errada (2 referências)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="45" data-nome="Mesa errada (2 referências)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/60secondstonapoli/" target="_blank" rel="noopener">@60secondstonapoli</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXll7_hFNbR/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1056,6 +1147,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#48</span> <span class="nome">Cortesia: &quot;traz aí&quot; (1,5 mi de views)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="48" data-nome="Cortesia: &quot;traz aí&quot; (1,5 mi de views)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><span class="autor vazio">perfil a identificar</span><span class="met" title="views">👁 ~1,5 mi</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DWWVYR_jj-0/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1066,6 +1158,7 @@
   </div>
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#50</span> <span class="nome">Come a caixa no caminho</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="50" data-nome="Come a caixa no caminho"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/giulia.ristuccia/" target="_blank" rel="noopener">@giulia.ristuccia</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DY6dUqUNnBN/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1076,6 +1169,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#51</span> <span class="nome">Desafio MrBeast</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="51" data-nome="Desafio MrBeast"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/feastables/" target="_blank" rel="noopener">@feastables</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYfKJ_ixBpi/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1086,6 +1180,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#54</span> <span class="nome">Testemunho por café</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="54" data-nome="Testemunho por café"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/lainocente.go/" target="_blank" rel="noopener">@lainocente.go</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaOB6ewITz-/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1096,6 +1191,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#55</span> <span class="nome">Papelzinho da vergonha</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="55" data-nome="Papelzinho da vergonha"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/crumblverse/" target="_blank" rel="noopener">@crumblverse</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXZmBkEEUs8/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1106,6 +1202,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#57</span> <span class="nome">&quot;Nossa&quot; = R$ 5 de desconto</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="57" data-nome="&quot;Nossa&quot; = R$ 5 de desconto"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/fabricadolancherp/" target="_blank" rel="noopener">@fabricadolancherp</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaTfCx4hCYj/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1131,6 +1228,7 @@
   </div>
   <div class="grid"><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#10</span> <span class="nome">Rap da produção</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="10" data-nome="Rap da produção"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/padariapurotrigo/" target="_blank" rel="noopener">@padariapurotrigo</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaGTYJkSDL8/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1141,6 +1239,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#15</span> <span class="nome">Troca o pedido por amor</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="15" data-nome="Troca o pedido por amor"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/ladylaurencassidy/" target="_blank" rel="noopener">@ladylaurencassidy</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYpr2B7Pvlh/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1151,6 +1250,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#27</span> <span class="nome">&quot;Marketing explica a produção&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="27" data-nome="&quot;Marketing explica a produção&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/bombonnicake/" target="_blank" rel="noopener">@bombonnicake</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DUdSSrrEVoe/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1161,6 +1261,7 @@
   </div>
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#29</span> <span class="nome">Lista de clássicos + marca como fecho</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="29" data-nome="Lista de clássicos + marca como fecho"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/alykima_/" target="_blank" rel="noopener">@alykima_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYNP5xORypr/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1171,6 +1272,7 @@
   </div>
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#30</span> <span class="nome">Sketch falsa (cookie = memória)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="30" data-nome="Sketch falsa (cookie = memória)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/arebimboca/" target="_blank" rel="noopener">@arebimboca</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DX-Hm7NqejI/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1181,6 +1283,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#35</span> <span class="nome">&quot;Meu amor&quot; para todos</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="35" data-nome="&quot;Meu amor&quot; para todos"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/wirisvianaoficial/" target="_blank" rel="noopener">@wirisvianaoficial</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DXow9AADrsv/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1191,6 +1294,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#44</span> <span class="nome">Dono escondido do amigo</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="44" data-nome="Dono escondido do amigo"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/buzzcafeoficial/" target="_blank" rel="noopener">@buzzcafeoficial</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZIqo9COv7T/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1201,6 +1305,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#46</span> <span class="nome">Chocolate na cara</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="46" data-nome="Chocolate na cara"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/sodiedocesniteroi_/" target="_blank" rel="noopener">@sodiedocesniteroi_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DW9nMbQAB4c/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1211,6 +1316,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#52</span> <span class="nome">Cookie na rua com nota</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="52" data-nome="Cookie na rua com nota"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/goodolcookie/" target="_blank" rel="noopener">@goodolcookie</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DVd_B18j8AS/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1236,6 +1342,7 @@
   </div>
   <div class="grid"><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#1</span> <span class="nome">Toda sobremesa = cookie</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="1" data-nome="Toda sobremesa = cookie"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/expoiso_/" target="_blank" rel="noopener">@expoiso_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaCt1DMpEWw/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1246,6 +1353,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#2</span> <span class="nome">Acerte o preço e leve grátis</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="2" data-nome="Acerte o preço e leve grátis"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/theguy/" target="_blank" rel="noopener">@theguy</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaT2F8DNMv4/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1256,6 +1364,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#4</span> <span class="nome">&quot;Morrendo&quot; de fome de doce</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="4" data-nome="&quot;Morrendo&quot; de fome de doce"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/paodequeijomania_cinturaoverde/" target="_blank" rel="noopener">@paodequeijomania_cinturaoverde</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DT-0843DfeZ/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1266,6 +1375,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#7</span> <span class="nome">Escalada dos pretendentes</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="7" data-nome="Escalada dos pretendentes"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/samoflowersuz/" target="_blank" rel="noopener">@samoflowersuz</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZ0HBy_ImxK/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1276,6 +1386,7 @@
   </div>
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#8</span> <span class="nome">Sinais por toda parte</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="8" data-nome="Sinais por toda parte"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/flowcookies027/" target="_blank" rel="noopener">@flowcookies027</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZ5ln74Cc9L/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1286,6 +1397,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#14</span> <span class="nome">Compra tudo, esquece o 1</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="14" data-nome="Compra tudo, esquece o 1"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/vivabemsg/" target="_blank" rel="noopener">@vivabemsg</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZco-5KKkck/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1296,6 +1408,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#22</span> <span class="nome">&quot;Pra cookie tenho dinheiro&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="22" data-nome="&quot;Pra cookie tenho dinheiro&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/kaka_placido/" target="_blank" rel="noopener">@kaka_placido</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DWUyYP7Dzx9/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1306,6 +1419,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#25</span> <span class="nome">Clipe viral + apresentação da loja</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="25" data-nome="Clipe viral + apresentação da loja"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/judysfamilycafe/" target="_blank" rel="noopener">@judysfamilycafe</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DUO0ZzBDndH/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1316,6 +1430,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#37</span> <span class="nome">&quot;Perdemos R$ 15&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="37" data-nome="&quot;Perdemos R$ 15&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/gameworldindiana/" target="_blank" rel="noopener">@gameworldindiana</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DaEKmYtEdCX/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1326,6 +1441,7 @@
   </div>
 </div><div class="card" data-tipo="3">
   <div class="cardhead"><span class="num">#38</span> <span class="nome">Perseguição</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="38" data-nome="Perseguição"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b3402a;background:#fdeae5">Tipo 3 · Complexo</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/yesly/" target="_blank" rel="noopener">@yesly</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZnZYJAxZKg/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1336,6 +1452,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#47</span> <span class="nome">Cookie de colorir</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="47" data-nome="Cookie de colorir"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/_camellia08_/" target="_blank" rel="noopener">@_camellia08_</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DZVBILkJfmv/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1346,6 +1463,7 @@
   </div>
 </div><div class="card" data-tipo="2">
   <div class="cardhead"><span class="num">#53</span> <span class="nome">Molho &quot;botão de volume&quot;</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="53" data-nome="Molho &quot;botão de volume&quot;"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#b8862d;background:#fdf3e0">Tipo 2 · Autoral</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/joycelyn_e98/" target="_blank" rel="noopener">@joycelyn_e98</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DTysEuQEaJO/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1356,6 +1474,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#56</span> <span class="nome">Bolinha nos copos</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="56" data-nome="Bolinha nos copos"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><a class="autor" href="https://www.instagram.com/mrbeastburgernz/" target="_blank" rel="noopener">@mrbeastburgernz</a><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DYRVusymuZ4/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1366,6 +1485,7 @@
   </div>
 </div><div class="card" data-tipo="1">
   <div class="cardhead"><span class="num">#58</span> <span class="nome">Bolinha no jarro (troco de 100)</span></div>
+  <label class="pick"><input type="checkbox" class="pickbox" data-num="58" data-nome="Bolinha no jarro (troco de 100)"> ✅ Quero fazer este</label>
   <div class="badges"><span class="badge" style="color:#2e7d32;background:#e8f5e9">Tipo 1 · Simples</span></div>
   <div class="meta"><span class="autor vazio">perfil a identificar</span><span class="met vazio">métricas: preencher no app</span></div>
   <div class="player"><iframe src="https://www.instagram.com/p/DX2dowGQkbr/embed/" loading="lazy" allowfullscreen scrolling="no"></iframe></div><button class="restart" onclick="restartVideo(this)" title="Recarrega o player e volta ao início">↺&nbsp; Recomeçar vídeo</button>
@@ -1381,6 +1501,45 @@
 </div>
 
 <script>
+function lerPicks() {
+  try { return JSON.parse(localStorage.getItem("hc_picks") || "[]"); } catch (e) { return []; }
+}
+function salvarPicks(p) { localStorage.setItem("hc_picks", JSON.stringify(p)); }
+function renderSelecao() {
+  var picks = lerPicks();
+  var nomes = {};
+  document.querySelectorAll(".pickbox").forEach(function(cb) { nomes[cb.dataset.num] = cb.dataset.nome; });
+  document.getElementById("selcount").textContent = picks.length;
+  var lista = document.getElementById("sellist");
+  if (!picks.length) {
+    lista.innerHTML = "<em>Nenhum vídeo marcado ainda — abra um formato e marque \"Quero fazer este\".</em>";
+    return;
+  }
+  lista.innerHTML = picks.map(function(n) {
+    return '<span class="selchip">#' + n + " " + (nomes[n] || "") + "</span>";
+  }).join("");
+}
+function copiarSelecao() {
+  var picks = lerPicks();
+  var nomes = {};
+  document.querySelectorAll(".pickbox").forEach(function(cb) { nomes[cb.dataset.num] = cb.dataset.nome; });
+  var txt = "Selecionados (" + picks.length + "): " + picks.map(function(n) { return "#" + n + " " + (nomes[n] || ""); }).join(" · ");
+  navigator.clipboard.writeText(txt).then(function() { alert("Lista copiada!\n\n" + txt); });
+}
+document.querySelectorAll(".pickbox").forEach(function(cb) {
+  var picks = lerPicks();
+  cb.checked = picks.indexOf(cb.dataset.num) !== -1;
+  cb.addEventListener("change", function() {
+    var picks = lerPicks();
+    var i = picks.indexOf(cb.dataset.num);
+    if (cb.checked && i === -1) picks.push(cb.dataset.num);
+    if (!cb.checked && i !== -1) picks.splice(i, 1);
+    salvarPicks(picks);
+    document.querySelectorAll('.pickbox[data-num="' + cb.dataset.num + '"]').forEach(function(o) { o.checked = cb.checked; });
+    renderSelecao();
+  });
+});
+renderSelecao();
 function restartVideo(btn) {
   var iframe = btn.previousElementSibling.querySelector("iframe");
   if (iframe) iframe.src = iframe.src;
