@@ -67,6 +67,11 @@
   .sellist { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; font-size: .85rem; }
   .sellist .selchip { background: #f0f7f1; border: 1px solid #cfe3d2; color: #2e7d32; font-weight: 700; border-radius: 999px; padding: 4px 12px; }
   .selnota { font-size: .75rem; color: #8a6d55; margin-left: 10px; }
+  .selvid { margin-top: 12px; border: 1px solid #cfe3d2; border-radius: 12px; background: #f8fbf8; }
+  .selvid summary { cursor: pointer; padding: 10px 14px; font-weight: 700; color: #2e7d32; list-style: revert; }
+  .selvid summary:hover { background: #eef6ef; border-radius: 12px; }
+  .selvid[open] summary { border-bottom: 1px solid #cfe3d2; }
+  .selvid .grid { padding: 14px; }
   .modelolink { display: inline-block; text-decoration: none; font-weight: 700; color: #fff; background: #b8862d; padding: 10px 22px; border-radius: 999px; }
   .modelolink:hover { background: #6b3f1d; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 18px; }
@@ -291,6 +296,10 @@
     <div id="sellist" class="sellist"><em>Nenhum vídeo marcado ainda — assista abaixo e marque "Quero fazer este".</em></div>
     <button class="fbtn" onclick="copiarSelecao()">📋 Copiar lista</button>
     <span class="selnota">A seleção fica salva neste navegador.</span>
+    <details class="selvid" id="selviddrop">
+      <summary>🎬 Ver vídeos da seleção</summary>
+      <div id="selvideos" class="grid"></div>
+    </details>
   </div>
   <div class="fmtbloco">
 <h3 class="exhead" style="color:#3E7C4F">🚀 Crescimento — 8 formatos · 23 vídeos</h3>
@@ -1550,6 +1559,40 @@ function renderSelecao() {
   lista.innerHTML = picks.map(function(n) {
     return '<span class="selchip">#' + n + " " + (nomes[n] || "") + "</span>";
   }).join("");
+  var drop = document.getElementById("selviddrop");
+  if (drop && drop.open) renderSelVideos();
+}
+function getVideoData() {
+  var map = {};
+  document.querySelectorAll(".card").forEach(function(card) {
+    var cb = card.querySelector(".pickbox");
+    if (!cb || map[cb.dataset.num]) return;
+    var player = card.querySelector(".player");
+    var restart = player && player.nextElementSibling && player.nextElementSibling.classList.contains("restart") ? player.nextElementSibling.outerHTML : "";
+    var iglink = card.querySelector(".iglink");
+    map[cb.dataset.num] = {
+      nome: cb.dataset.nome,
+      playerHTML: (player ? player.outerHTML : "") + restart,
+      iglink: iglink ? iglink.href : ""
+    };
+  });
+  return map;
+}
+function renderSelVideos() {
+  var cont = document.getElementById("selvideos");
+  if (!cont) return;
+  var picks = lerPicks();
+  if (!picks.length) {
+    cont.innerHTML = "<em>Nenhum vídeo marcado ainda.</em>";
+    return;
+  }
+  var data = getVideoData();
+  cont.innerHTML = picks.map(function(n) {
+    var d = data[n] || {};
+    var player = d.playerHTML || '<div class="player noembed"><div class="noembedbox"><p>Vídeo não encontrado.</p></div></div>';
+    var link = d.iglink ? '<div class="cardbody"><a class="iglink" href="' + d.iglink + '" target="_blank" rel="noopener">abrir no Instagram ↗</a></div>' : "";
+    return '<div class="card"><div class="cardhead"><span class="num">#' + n + '</span> <span class="nome">' + (d.nome || "") + '</span></div>' + player + link + '</div>';
+  }).join("");
 }
 function copiarSelecao() {
   var picks = lerPicks();
@@ -1572,6 +1615,8 @@ document.querySelectorAll(".pickbox").forEach(function(cb) {
   });
 });
 renderSelecao();
+var selviddrop = document.getElementById("selviddrop");
+if (selviddrop) selviddrop.addEventListener("toggle", function() { if (selviddrop.open) renderSelVideos(); });
 function restartVideo(btn) {
   var iframe = btn.previousElementSibling.querySelector("iframe");
   if (iframe) iframe.src = iframe.src;
