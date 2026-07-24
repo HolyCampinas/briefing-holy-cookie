@@ -295,7 +295,7 @@
     <h3>✅ Selecionados: <span id="selcount">0</span></h3>
     <div id="sellist" class="sellist"><em>Nenhum vídeo marcado ainda — assista abaixo e marque "Quero fazer este".</em></div>
     <button class="fbtn" onclick="copiarSelecao()">📋 Copiar lista</button>
-    <span class="selnota">A seleção é compartilhada com o time (sincroniza em ~20s).</span>
+    <span class="selnota">A seleção é compartilhada com o time (sincroniza em ~15s).</span>
     <details class="selvid" id="selviddrop">
       <summary>🎬 Ver vídeos da seleção</summary>
       <div id="selvideos" class="grid"></div>
@@ -1542,7 +1542,8 @@ document.querySelectorAll(".vtab").forEach(function(t) {
     window.scrollTo({top: 0});
   });
 });
-var HC_REMOTE_URL = "https://jsonblob.com/api/jsonBlob/019f94a0-82b0-74a8-aebe-dce5bf6f0291";
+var HC_SUPABASE_URL = "https://maxynljenpgmmjwufbcl.supabase.co/rest/v1/briefing_picks";
+var HC_SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1heHlubGplbnBnbW1qd3VmYmNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQzMTk0MzEsImV4cCI6MjA4OTg5NTQzMX0.TJJoqlfZFzAzw7pN39oeyF217-h284Qrgir_KP1BYE8";
 function lerPicks() {
   try { return JSON.parse(localStorage.getItem("hc_picks") || "[]"); } catch (e) { return []; }
 }
@@ -1552,11 +1553,29 @@ function aplicarPicks(p) {
   document.querySelectorAll(".pickbox").forEach(function(cb) { cb.checked = p.indexOf(cb.dataset.num) !== -1; });
   renderSelecao();
 }
-function buscarPicksRemoto() {
-  return fetch(HC_REMOTE_URL).then(function(r) { return r.json(); }).then(function(d) { return (d && d.picks) || []; }).catch(function() { return null; });
+function supaHeaders(extra) {
+  var h = { apikey: HC_SUPABASE_ANON, Authorization: "Bearer " + HC_SUPABASE_ANON };
+  for (var k in extra) h[k] = extra[k];
+  return h;
 }
-function salvarPicksRemoto(p) {
-  return fetch(HC_REMOTE_URL, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ picks: p }) }).catch(function() {});
+function buscarPicksRemoto() {
+  return fetch(HC_SUPABASE_URL + "?select=num", { headers: supaHeaders({}) })
+    .then(function(r) { return r.json(); })
+    .then(function(rows) { return rows.map(function(r) { return r.num; }); })
+    .catch(function() { return null; });
+}
+function marcarRemoto(num, nome) {
+  return fetch(HC_SUPABASE_URL, {
+    method: "POST",
+    headers: supaHeaders({ "Content-Type": "application/json", "Prefer": "resolution=ignore-duplicates" }),
+    body: JSON.stringify({ num: num, nome: nome })
+  }).catch(function() {});
+}
+function desmarcarRemoto(num) {
+  return fetch(HC_SUPABASE_URL + "?num=eq." + encodeURIComponent(num), {
+    method: "DELETE",
+    headers: supaHeaders({})
+  }).catch(function() {});
 }
 function sincronizar() {
   return buscarPicksRemoto().then(function(remoto) { if (remoto) aplicarPicks(remoto); });
@@ -1626,18 +1645,13 @@ document.querySelectorAll(".pickbox").forEach(function(cb) {
     if (checked && i === -1) picks.push(num);
     if (!checked && i !== -1) picks.splice(i, 1);
     aplicarPicks(picks);
-    buscarPicksRemoto().then(function(remoto) {
-      var base = remoto || picks;
-      var j = base.indexOf(num);
-      if (checked && j === -1) base.push(num);
-      if (!checked && j !== -1) base.splice(j, 1);
-      salvarPicksRemoto(base).then(function() { aplicarPicks(base); });
-    });
+    var op = checked ? marcarRemoto(num, cb.dataset.nome) : desmarcarRemoto(num);
+    op.then(sincronizar);
   });
 });
 renderSelecao();
 sincronizar();
-setInterval(sincronizar, 20000);
+setInterval(sincronizar, 15000);
 window.addEventListener("focus", sincronizar);
 var selviddrop = document.getElementById("selviddrop");
 if (selviddrop) selviddrop.addEventListener("toggle", function() { if (selviddrop.open) renderSelVideos(); });
