@@ -295,7 +295,7 @@
     <h3>✅ Selecionados: <span id="selcount">0</span></h3>
     <div id="sellist" class="sellist"><em>Nenhum vídeo marcado ainda — assista abaixo e marque "Quero fazer este".</em></div>
     <button class="fbtn" onclick="copiarSelecao()">📋 Copiar lista</button>
-    <span class="selnota">A seleção fica salva neste navegador.</span>
+    <span class="selnota">A seleção é compartilhada com o time (sincroniza em ~20s).</span>
     <details class="selvid" id="selviddrop">
       <summary>🎬 Ver vídeos da seleção</summary>
       <div id="selvideos" class="grid"></div>
@@ -1542,10 +1542,25 @@ document.querySelectorAll(".vtab").forEach(function(t) {
     window.scrollTo({top: 0});
   });
 });
+var HC_REMOTE_URL = "https://jsonblob.com/api/jsonBlob/019f94a0-82b0-74a8-aebe-dce5bf6f0291";
 function lerPicks() {
   try { return JSON.parse(localStorage.getItem("hc_picks") || "[]"); } catch (e) { return []; }
 }
-function salvarPicks(p) { localStorage.setItem("hc_picks", JSON.stringify(p)); }
+function salvarPicksLocal(p) { localStorage.setItem("hc_picks", JSON.stringify(p)); }
+function aplicarPicks(p) {
+  salvarPicksLocal(p);
+  document.querySelectorAll(".pickbox").forEach(function(cb) { cb.checked = p.indexOf(cb.dataset.num) !== -1; });
+  renderSelecao();
+}
+function buscarPicksRemoto() {
+  return fetch(HC_REMOTE_URL).then(function(r) { return r.json(); }).then(function(d) { return (d && d.picks) || []; }).catch(function() { return null; });
+}
+function salvarPicksRemoto(p) {
+  return fetch(HC_REMOTE_URL, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ picks: p }) }).catch(function() {});
+}
+function sincronizar() {
+  return buscarPicksRemoto().then(function(remoto) { if (remoto) aplicarPicks(remoto); });
+}
 function renderSelecao() {
   var picks = lerPicks();
   var nomes = {};
@@ -1602,19 +1617,28 @@ function copiarSelecao() {
   navigator.clipboard.writeText(txt).then(function() { alert("Lista copiada!\n\n" + txt); });
 }
 document.querySelectorAll(".pickbox").forEach(function(cb) {
-  var picks = lerPicks();
-  cb.checked = picks.indexOf(cb.dataset.num) !== -1;
+  cb.checked = lerPicks().indexOf(cb.dataset.num) !== -1;
   cb.addEventListener("change", function() {
+    var num = cb.dataset.num;
+    var checked = cb.checked;
     var picks = lerPicks();
-    var i = picks.indexOf(cb.dataset.num);
-    if (cb.checked && i === -1) picks.push(cb.dataset.num);
-    if (!cb.checked && i !== -1) picks.splice(i, 1);
-    salvarPicks(picks);
-    document.querySelectorAll('.pickbox[data-num="' + cb.dataset.num + '"]').forEach(function(o) { o.checked = cb.checked; });
-    renderSelecao();
+    var i = picks.indexOf(num);
+    if (checked && i === -1) picks.push(num);
+    if (!checked && i !== -1) picks.splice(i, 1);
+    aplicarPicks(picks);
+    buscarPicksRemoto().then(function(remoto) {
+      var base = remoto || picks;
+      var j = base.indexOf(num);
+      if (checked && j === -1) base.push(num);
+      if (!checked && j !== -1) base.splice(j, 1);
+      salvarPicksRemoto(base).then(function() { aplicarPicks(base); });
+    });
   });
 });
 renderSelecao();
+sincronizar();
+setInterval(sincronizar, 20000);
+window.addEventListener("focus", sincronizar);
 var selviddrop = document.getElementById("selviddrop");
 if (selviddrop) selviddrop.addEventListener("toggle", function() { if (selviddrop.open) renderSelVideos(); });
 function restartVideo(btn) {
